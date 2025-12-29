@@ -202,3 +202,13 @@ button:hover {
   margin-top: 40px;
 }
 
+/* ===== Miniatura do PDF nos certificados ===== */
+.certificate-thumb {
+  width: 48px;       /* tamanho menor, mais elegante */
+  height: 48px;
+  object-fit: contain;
+  margin-bottom: 12px; /* espaço entre ícone e título */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

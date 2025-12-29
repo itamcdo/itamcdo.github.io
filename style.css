@@ -74,15 +74,70 @@ p {
   box-shadow: 0 12px 24px rgba(0,0,0,0.7);
 }
 
-/* ===== Skills Icons ===== */
-.skills-icons img {
-  width: 60px;
-  height: 60px;
-  transition: transform 0.3s;
+/* ===== Skills Grid ===== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.skills-icons img:hover {
-  transform: scale(1.1);
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  opacity: 0;
+  transform: translateY(30px);
+  width: 120px;
+}
+
+.skill-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.skill-card span {
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ===== Badges ===== */
+.badge {
+  display: inline-block;
+  margin: 4px 6px 4px 0;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: #374151;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 14px;
+  cursor: default;
+  transition: all 0.3s;
+}
+
+.badge:hover {
+  background: var(--primary);
+  color: #fff;
 }
 
 /* ===== Profile Image ===== */
@@ -140,7 +195,7 @@ button:hover {
   opacity: 0.85;
 }
 
-/* ===== Grid ===== */
+/* ===== Grid Projects & Certificates ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -148,7 +203,7 @@ button:hover {
   margin-top: 40px;
 }
 
-/* ===== PDF Icon para certificados ===== */
+/* ===== Miniatura PDF Certificates ===== */
 .certificate-thumb {
   width: 48px;
   height: 48px;

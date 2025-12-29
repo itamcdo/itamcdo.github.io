@@ -15,13 +15,6 @@ Sou **Analista de Dados e Business Intelligence**, atualmente à frente do **Com
 
 ---
 
-## 💻 Skills
-
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 5px;">
-</div>
-
----
-
 ## 📂 Projetos
 
 - **Dashboard Hospitalar:** Análise de indicadores operacionais e assistenciais com Power BI.

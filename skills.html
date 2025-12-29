@@ -10,68 +10,62 @@
 <body>
 
 <header>
-  <h1 data-animate>Skills</h1>
-  <p data-animate>
+  <h1>Skills</h1>
+  <p>
     Principais habilidades técnicas e ferramentas que utilizo no dia a dia para análise de dados, BI e automação.
   </p>
 </header>
 
 <main>
   <section>
-    <h2 data-animate>Habilidades Técnicas</h2>
+    <h2>Habilidades Técnicas</h2>
 
-    <!-- Skill: Power BI -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">Power BI <span class="tooltip">Avançado</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 90%;"></div>
+        <div class="skill-bar" data-width="90%"></div>
       </div>
     </div>
 
-    <!-- Skill: SQL -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">SQL <span class="tooltip">Avançado</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 85%;"></div>
+        <div class="skill-bar" data-width="85%"></div>
       </div>
     </div>
 
-    <!-- Skill: Python -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">Python <span class="tooltip">Avançado</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 80%;"></div>
+        <div class="skill-bar" data-width="80%"></div>
       </div>
     </div>
 
-    <!-- Skill: JavaScript -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">JavaScript <span class="tooltip">Intermediário</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 70%;"></div>
+        <div class="skill-bar" data-width="70%"></div>
       </div>
     </div>
 
-    <!-- Skill: Node.js -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">Node.js <span class="tooltip">Intermediário</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 65%;"></div>
+        <div class="skill-bar" data-width="65%"></div>
       </div>
     </div>
 
-    <!-- Skill: React -->
-    <div class="skill" data-animate>
+    <div class="skill">
       <div class="skill-name">React <span class="tooltip">Intermediário</span></div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 70%;"></div>
+        <div class="skill-bar" data-width="70%"></div>
       </div>
     </div>
   </section>
 
   <section>
-    <h2 data-animate>Certificações / Cursos</h2>
-    <div class="badges" data-animate>
+    <h2>Certificações / Cursos</h2>
+    <div class="badges">
       <span class="badge">Power BI</span>
       <span class="badge">SQL</span>
       <span class="badge">Python</span>
@@ -83,6 +77,18 @@
   </section>
 </main>
 
-<script src="script.js"></script>
+<script>
+  // Animação das skills
+  document.addEventListener("DOMContentLoaded", () => {
+    const bars = document.querySelectorAll(".skill-bar");
+    bars.forEach(bar => {
+      const width = bar.getAttribute("data-width");
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 300); // atraso leve para animação
+    });
+  });
+</script>
+
 </body>
 </html>

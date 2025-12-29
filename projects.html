@@ -6,45 +6,90 @@
 <title>Projetos | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ===== Grid de projetos ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-card .card-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.project-card .card-buttons .button {
+  font-size: 14px;
+  padding: 10px 18px;
+}
+</style>
 </head>
 <body>
 
 <header>
   <h1 data-animate>Projetos</h1>
   <p data-animate>
-    Aqui você encontra os principais projetos públicos que desenvolvi, com foco em automação,
-    análise de dados e dashboards.
+    Aqui estão alguns dos projetos que desenvolvi, com foco em análise de dados, BI e automação.
   </p>
 </header>
 
 <main>
-  <section>
-    <!-- Card do projeto inicial -->
-    <div class="card" data-animate>
-      <h3>Google Apps Script - Receipt Automation</h3>
-      <p>
-        Automação de processos hospitalares usando Google Apps Script para integração
-        de dados e geração de relatórios de recibos.
-      </p>
-      <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" class="button" target="_blank">Ver no GitHub</a>
+  <section class="projects-grid">
+
+    <!-- Projeto Exemplo -->
+    <div class="project-card" data-animate>
+      <h3>Automação de Recibos - Google Apps Script</h3>
+      <p>Projeto de automação de extração e envio de recibos usando Google Apps Script.</p>
+      <div class="card-buttons">
+        <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" class="button" target="_blank">Ver Repositório</a>
+      </div>
     </div>
 
-    <!-- Outros projetos podem ser adicionados aqui -->
-    <div class="card" data-animate>
-      <h3>Projeto Exemplo 2</h3>
-      <p>
-        Descrição resumida do projeto. Use este espaço para destacar objetivos e tecnologias.
-      </p>
-      <a href="#" class="button" target="_blank">Ver no GitHub</a>
+    <!-- Outro projeto exemplo -->
+    <div class="project-card" data-animate>
+      <h3>Dashboard de Faturamento Hospitalar</h3>
+      <p>Desenvolvimento de dashboard analítico em Power BI para monitoramento de KPIs hospitalares.</p>
+      <div class="card-buttons">
+        <a href="#" class="button" target="_blank">Ver Projeto</a>
+      </div>
     </div>
 
-    <div class="card" data-animate>
-      <h3>Projeto Exemplo 3</h3>
-      <p>
-        Descrição resumida do projeto. Pode incluir dashboard, automação ou análise de dados.
-      </p>
-      <a href="#" class="button" target="_blank">Ver no GitHub</a>
-    </div>
+    <!-- Mais projetos podem ser adicionados aqui -->
   </section>
 </main>
 

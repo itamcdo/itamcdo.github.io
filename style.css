@@ -100,18 +100,19 @@ p {
 
 /* ===== Skills ===== */
 .skill-bar-bg {
-  background: #e5e7eb;
+  background: #e5e7eb; /* barra de fundo clara */
   border-radius: 12px;
-  height: 18px;
+  height: 20px;
   overflow: hidden;
   margin-bottom: 16px;
 }
 
 .skill-bar {
-  height: 18px;
+  height: 20px;
   border-radius: 12px;
   width: 0;
-  transition: width 1s ease-in-out;
+  background: linear-gradient(90deg, #6366f1, #4f46e5); /* gradiente para destaque */
+  transition: width 1.2s ease-in-out;
 }
 
 .skill-name {
@@ -120,13 +121,14 @@ p {
   text-align: left;
   max-width: 400px;
   margin: 10px auto 4px auto;
+  color: var(--text);
 }
 
 .tooltip {
   position: absolute;
   right: 0;
   top: -28px;
-  background: var(--primary);
+  background: var(--accent);
   color: #fff;
   padding: 4px 8px;
   font-size: 13px;
@@ -141,6 +143,17 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (prefers-color-scheme: dark) {
+  .skill-bar-bg {
+    background: #1e293b; /* fundo escuro */
+  }
+
+  .skill-bar {
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+  }
+}
+
 
 /* ===== Badges ===== */
 .badge {

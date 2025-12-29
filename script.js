@@ -1,4 +1,3 @@
-// Animação de elementos ao scroll
 function animateOnScroll() {
   const elements = document.querySelectorAll('[data-animate]');
   const windowHeight = window.innerHeight;
@@ -11,16 +10,14 @@ function animateOnScroll() {
   });
 }
 
-// Animação de skills
 function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
   skills.forEach(bar => {
-    const width = bar.getAttribute('style').match(/width:\s*(\d+)%/)[1];
-    bar.style.width = width + '%';
+    const width = bar.style.width;
+    bar.style.width = width;
   });
 }
 
-// Inicialização
 function initAnimations() {
   animateOnScroll();
   animateSkills();

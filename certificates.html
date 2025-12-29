@@ -13,9 +13,9 @@
       --card: #ffffff;
       --text: #111827;
       --text-secondary: #4b5563;
+      --border: #e5e7eb;
       --button: #111827;
       --button-text: #ffffff;
-      --button-secondary: #e5e7eb;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -24,9 +24,9 @@
         --card: #020617;
         --text: #e5e7eb;
         --text-secondary: #9ca3af;
+        --border: #1e293b;
         --button: #e5e7eb;
         --button-text: #020617;
-        --button-secondary: #1e293b;
       }
     }
 
@@ -38,57 +38,90 @@
     }
 
     header {
-      background: var(--card);
-      padding: 50px 20px;
+      padding: 80px 20px 40px;
       text-align: center;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 25px 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      margin-bottom: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .card h3 {
-      margin: 0 0 8px 0;
-    }
-
-    .card span {
+    p.subtitle {
       color: var(--text-secondary);
-      font-size: 14px;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
     }
 
-    a.button {
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .cert {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cert h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .cert p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .cert span {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .cert a {
+      align-self: flex-start;
       padding: 10px 18px;
       background: var(--button);
       color: var(--button-text);
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-weight: 500;
       font-size: 14px;
-      margin-top: 10px;
+    }
+
+    .cert a:hover {
+      opacity: 0.85;
     }
 
     .back {
-      margin-top: 50px;
+      margin-top: 60px;
       text-align: center;
     }
 
     .back a {
-      color: var(--text);
+      color: var(--text-secondary);
       text-decoration: none;
-      font-weight: 600;
+    }
+
+    .back a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -97,34 +130,60 @@
 
 <header>
   <h1>Certificados</h1>
-  <p>Formação contínua em dados, tecnologia e automação</p>
+  <p class="subtitle">
+    Certificações e cursos complementares focados em dados, tecnologia,
+    automação de processos e análise de informações.
+  </p>
 </header>
 
-<main class="container">
+<main>
 
-  <div class="card">
-    <div>
-      <h3>Google Data Analytics</h3>
-      <span>Google • Coursera</span>
-    </div>
-    <a class="button"
-       href="certificates/certificado-google-data.pdf"
-       target="_blank">
-      Abrir PDF
-    </a>
-  </div>
+  <section class="cert-grid">
 
-  <div class="card">
-    <div>
-      <h3>SQL para Análise de Dados</h3>
-      <span>Alura</span>
+    <!-- CERTIFICADO EXEMPLO -->
+    <div class="cert">
+      <div>
+        <h2>Fundamentos de Análise de Dados</h2>
+        <p>
+          Curso introdutório abordando conceitos de análise de dados,
+          organização de informações e interpretação de resultados.
+        </p>
+        <span>Instituição: Em breve</span>
+      </div>
+      <a href="assets/certificates/fundamentos-analise-dados.pdf" target="_blank">
+        Ver certificado (PDF)
+      </a>
     </div>
-    <a class="button"
-       href="certificates/certificado-alura-sql.pdf"
-       target="_blank">
-      Abrir PDF
-    </a>
-  </div>
+
+    <div class="cert">
+      <div>
+        <h2>Automação de Processos</h2>
+        <p>
+          Certificação focada na automação de tarefas repetitivas
+          utilizando scripts e ferramentas digitais.
+        </p>
+        <span>Instituição: Em breve</span>
+      </div>
+      <a href="assets/certificates/automacao-processos.pdf" target="_blank">
+        Ver certificado (PDF)
+      </a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <h2>Visualização de Dados</h2>
+        <p>
+          Curso voltado para criação de dashboards e apresentação
+          visual de dados para tomada de decisão.
+        </p>
+        <span>Instituição: Em breve</span>
+      </div>
+      <a href="assets/certificates/visualizacao-dados.pdf" target="_blank">
+        Ver certificado (PDF)
+      </a>
+    </div>
+
+  </section>
 
   <div class="back">
     <a href="index.html">← Voltar para o início</a>

@@ -234,3 +234,12 @@ button:hover {
 .socials a:hover {
   color: var(--accent);
 }
+
+/* ===== Grid de Certificados ===== */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+

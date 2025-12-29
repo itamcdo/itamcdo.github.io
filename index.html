@@ -6,10 +6,47 @@
 <title>Maria Ita Macêdo | Portfólio de Dados</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* ===== Adicionando efeitos específicos para index ===== */
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+}
+
+.buttons {
+  margin-top: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button, .button.secondary {
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button.secondary:hover {
+  transform: translateY(-3px);
+}
+</style>
 </head>
 <body>
 
-<header>
+<header role="banner">
   <img src="assets/profile.jpeg" alt="Maria Ita Macêdo" class="profile-img" data-animate>
   <h1 data-animate>Maria Ita Macêdo</h1>
   <p data-animate>

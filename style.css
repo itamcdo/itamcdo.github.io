@@ -1,12 +1,13 @@
 :root {
-  --bg: #0a1f44;           /* Fundo azul escuro */
-  --card: #1e2a47;         /* Cards azul levemente mais claro */
-  --text: #e5e7eb;         /* Texto principal */
+  --bg: #0a1f44;        /* Fundo azul escuro */
+  --card: #1e2a47;      /* Cards azul mais claro */
+  --text: #e5e7eb;      /* Texto principal */
   --text-secondary: #a0aec0; /* Texto secundário */
-  --primary: #4f86f7;      /* Azul vibrante para botões/destaques */
-  --accent: #3b6fd1;       /* Azul complementar */
+  --primary: #4f86f7;   /* Azul vibrante para botões/destaques */
+  --accent: #3b6fd1;    /* Azul complementar */
 }
 
+/* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -75,49 +76,45 @@ p {
 }
 
 /* ===== Skills ===== */
-.skill-bar-bg {
-  background: #2b3a5a;
-  border-radius: 12px;
-  height: 20px;
-  overflow: hidden;
-  margin-bottom: 16px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
 }
 
-.skill-bar {
-  height: 20px;
-  border-radius: 12px;
-  width: 0;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  transition: width 1.2s ease-in-out;
+.skill-card {
+  width: 120px;
+  text-align: center;
+}
+
+.skill-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .skill-name {
   font-weight: 600;
-  margin-bottom: 6px;
-  text-align: left;
-  max-width: 400px;
-  margin: 10px auto 4px auto;
   color: var(--text);
+  margin-bottom: 6px;
 }
 
-.tooltip {
-  position: absolute;
-  right: 0;
-  top: -28px;
-  background: var(--accent);
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 13px;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(-5px);
-  pointer-events: none;
+.skill-bar-bg {
+  background: #2b3a5a;
+  border-radius: 12px;
+  height: 12px;
+  overflow: hidden;
 }
 
-.skill:hover .tooltip {
-  opacity: 1;
-  transform: translateY(0);
+.skill-bar {
+  height: 12px;
+  border-radius: 12px;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 1.2s ease-in-out;
 }
 
 /* ===== Badges ===== */
@@ -218,11 +215,16 @@ button:hover {
   .buttons {
     flex-direction: column;
   }
-
-  .skill-name, .badge {
-    max-width: 100%;
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
-
+  .skill-card {
+    width: 100%;
+  }
+  .skill-icon {
+    width: 48px;
+    height: 48px;
+  }
   header, main, section {
     padding: 30px 15px;
   }

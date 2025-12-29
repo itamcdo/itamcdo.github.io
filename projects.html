@@ -8,15 +8,37 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --button: #111827;
+      --button-text: #ffffff;
+      --button-secondary: #e5e7eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #020617;
+        --text: #e5e7eb;
+        --text-secondary: #9ca3af;
+        --button: #e5e7eb;
+        --button-text: #020617;
+        --button-secondary: #1e293b;
+      }
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f9fafb;
-      color: #111827;
+      background: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background: #ffffff;
+      background: var(--card);
       padding: 50px 20px;
       text-align: center;
     }
@@ -28,7 +50,7 @@
     }
 
     .project {
-      background: #ffffff;
+      background: var(--card);
       border-radius: 14px;
       padding: 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -40,12 +62,13 @@
     }
 
     .project p {
-      color: #4b5563;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
 
     .tags span {
       display: inline-block;
-      background: #e5e7eb;
+      background: var(--button-secondary);
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 13px;
@@ -56,8 +79,8 @@
       display: inline-block;
       margin-top: 20px;
       padding: 10px 20px;
-      background: #111827;
-      color: #ffffff;
+      background: var(--button);
+      color: var(--button-text);
       text-decoration: none;
       border-radius: 8px;
       font-size: 14px;
@@ -67,6 +90,12 @@
       text-align: center;
       margin-top: 60px;
     }
+
+    .back a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
   </style>
 </head>
 
@@ -74,9 +103,7 @@
 
 <header>
   <h1>Projetos</h1>
-  <p>Solução completa de automação para geração, envio e controle de recibos,
-utilizando Google Apps Script integrado ao Google Sheets e Gmail,
-eliminando processos manuais e reduzindo erros operacionais.</p>
+  <p>Projetos reais aplicados à automação e análise de dados</p>
 </header>
 
 <main class="container">
@@ -84,9 +111,11 @@ eliminando processos manuais e reduzindo erros operacionais.</p>
   <!-- PROJETO PRINCIPAL -->
   <div class="project">
     <h3>Automação de Recibos com Google Apps Script</h3>
+
     <p>
-      Sistema automatizado para geração, envio e organização de recibos utilizando
-      Google Apps Script, Google Sheets e Gmail API.
+      Solução completa de automação para geração, envio e controle de recibos,
+      integrando Google Apps Script, Google Sheets e Gmail,
+      eliminando processos manuais e reduzindo erros operacionais.
     </p>
 
     <div class="tags">
@@ -99,7 +128,7 @@ eliminando processos manuais e reduzindo erros operacionais.</p>
     <a class="button"
        href="https://github.com/itamcdo/google-apps-script-receipt-automation"
        target="_blank">
-       Ver no GitHub
+      Ver no GitHub
     </a>
   </div>
 

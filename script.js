@@ -1,35 +1,33 @@
-// script.js
-
-// Função para detectar elementos visíveis na tela
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 50
-  );
-}
-
-// Adiciona classe 'show' quando o elemento entra na viewport
+// Função para animação de elementos ao scroll
 function animateOnScroll() {
   const elements = document.querySelectorAll('[data-animate]');
+  const windowHeight = window.innerHeight;
+
   elements.forEach(el => {
-    if (isInViewport(el)) {
+    const positionFromTop = el.getBoundingClientRect().top;
+
+    if (positionFromTop - windowHeight <= -100) {
       el.classList.add('show');
     }
   });
-
-  // Foto de perfil animada
-  const profile = document.querySelector('.profile-img');
-  if (profile && isInViewport(profile)) {
-    profile.classList.add('show');
-  }
 }
 
-// Inicializa animações ao carregar a página
-window.addEventListener('load', () => {
-  animateOnScroll();
-});
+// Barra de skills animada
+function animateSkills() {
+  const skills = document.querySelectorAll('.skill-bar');
 
-// Atualiza animações ao rolar a página
-window.addEventListener('scroll', () => {
+  skills.forEach(bar => {
+    const width = bar.getAttribute('style').match(/width:\s*(\d+)%/)[1];
+    bar.style.width = width + '%';
+  });
+}
+
+// Inicializa animações
+function initAnimations() {
   animateOnScroll();
-});
+  animateSkills();
+}
+
+// Eventos
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', initAnimations);

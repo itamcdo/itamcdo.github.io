@@ -4,28 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contato | Maria Ita Macêdo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <h1>Contato</h1>
-  <p>Entre em contato comigo para projetos ou parcerias.</p>
+  <h1 data-animate>Contato</h1>
+  <p data-animate>
+    Entre em contato comigo para oportunidades, parcerias ou dúvidas sobre projetos e análises de dados.
+  </p>
 </header>
 
 <main>
-  <form action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
-    <input type="text" name="nome" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu email" required>
-    <textarea name="mensagem" rows="6" placeholder="Sua mensagem" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
+  <section>
+    <form data-animate action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="mensagem" rows="6" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
 
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/itamacdo" target="_blank">LinkedIn</a>
-    <a href="https://github.com/itamcdo" target="_blank">GitHub</a>
-    <a href="mailto:itammacedo20@gmail.com">Email</a>
-  </div>
+    <div class="socials" data-animate>
+      <a href="https://www.linkedin.com/in/itamcdo/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/itamcdo" target="_blank">GitHub</a>
+      <a href="mailto:itammacedo@gmail.com">Email</a>
+    </div>
+  </section>
 </main>
 
 <script src="script.js"></script>

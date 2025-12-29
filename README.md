@@ -1,64 +1,53 @@
-# 👋 Maria Ita Macêdo
+# 👋 Olá, eu sou Maria Ita Macêdo
 
-**Analista de Dados & Business Intelligence**  
-Power BI • SQL • Python • JavaScript • Node.js • React • Automação de Dados
+**Analista de Dados & BI** | Power BI | SQL | Python | JavaScript | Node.js | React | Automação de Dados  
 
----
-
-## 📊 Sobre mim
-
-Analista de Dados e Business Intelligence, com atuação técnica na liderança do **Command Center Hospitalar**, focada na coleta, integração, tratamento, análise e visualização de dados para suporte à tomada de decisão em ambientes de alta criticidade.
-
-Experiência sólida na construção de dashboards analíticos e gerenciais, modelagem de dados, definição e monitoramento de KPIs, além da análise de indicadores operacionais, assistenciais e administrativos, utilizando **Power BI (DAX, modelagem e visualização)**, **SQL**, **Excel avançado** e **Python** aplicado à análise e automação de dados.
-
-Atuo também no desenvolvimento de soluções internas, APIs e automações utilizando **JavaScript, Node.js e React**, além da implementação de workflows automatizados com **Google Sheets e Google Apps Script**, garantindo padronização, escalabilidade e confiabilidade das informações.
-
-Perfil orientado a **Data Analytics**, **Business Intelligence** e **Data-Driven Decision Making**, com foco em melhoria contínua de processos e alinhamento entre dados, tecnologia e objetivos estratégicos do negócio.
+Atualmente à frente do **Command Center Hospitalar**, atuando com análise, automação e visualização de dados para suporte à decisão estratégica em ambientes críticos.
 
 ---
 
-## 🚀 Projetos em Destaque
-
-### 🔹 Google Apps Script – Receipt Automation
-📎 Repositório:  
-👉 https://github.com/itamcdo/google-apps-script-receipt-automation
-
-Automação desenvolvida para processamento de recibos, integração com Google Sheets e padronização de dados financeiros, reduzindo esforço manual e aumentando confiabilidade das informações.
-
-**Tecnologias:**  
-- Google Apps Script  
-- JavaScript  
-- Google Sheets  
+## 💻 Portfólio Online
+🌐 [Acesse meu Portfólio](https://itamcdo.github.io/portfolio/)
 
 ---
 
-## 🧠 Principais Competências
+## 🔹 Projetos em Destaque
 
-- Análise de Dados e Business Intelligence  
-- Power BI (DAX, modelagem e visualização)  
-- SQL (consultas, joins, agregações)  
-- Python (análise e automação)  
-- Automação de processos e workflows  
-- Desenvolvimento de APIs e soluções internas  
-- KPI, indicadores e suporte à tomada de decisão  
-
----
-
-## 📂 Portfólio & Certificados
-
-- 🌐 **Portfólio:** https://itamcdo.github.io  
-- 📄 **Certificados:** disponíveis no repositório do portfólio  
-- 💼 **LinkedIn:** https://www.linkedin.com/in/itamacdo
+| Projeto | Tecnologias | Link |
+|---------|------------|------|
+| Google Apps Script - Automação de Receipts | Google Apps Script, JS, Excel | [GitHub](https://github.com/itamcdo/google-apps-script-receipt-automation) |
+| Power BI - Dashboards Analíticos | Power BI, DAX, Modelagem | [GitHub](https://github.com/itamcdo/power-bi-dashboards) |
+| SQL para Análise de Dados | SQL, Joins, KPIs | [GitHub](https://github.com/itamcdo/sql-analise-dados) |
+| Python - Automação de Relatórios | Python, Pandas | [GitHub](https://github.com/itamcdo/python-data-automation) |
 
 ---
 
-## 📬 Contato
+## 🛠 Habilidades Técnicas
 
-Se quiser trocar ideias sobre dados, BI ou automação, fique à vontade para entrar em contato:
-
-📧 Email: itammacedo20@gmail.com
-💼 LinkedIn: https://www.linkedin.com/in/itamacdo
+**Power BI:** ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=power-bi&logoColor=white)  
+**SQL:** ![SQL](https://img.shields.io/badge/-SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)  
+**Python:** ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)  
+**JavaScript / Node.js / React:** ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)  
+**Google Apps Script:** ![GAS](https://img.shields.io/badge/-AppsScript-0F9D58?style=flat-square&logo=google&logoColor=white)  
 
 ---
 
-⭐ Se algum projeto foi útil para você, considere deixar uma estrela!
+## 🎓 Certificados
+📂 [Acesse todos os certificados](https://itamcdo.github.io/portfolio/certificates.html)  
+
+- Coleta e Extração de Dados com Power BI  
+- SQL para Análise de Dados  
+- Python para Data Analytics  
+- Google Apps Script - Automação  
+
+---
+
+## 📫 Contato
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-linkedin)  
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/itamcdo)  
+✉️ Email: itammacedo20@gmail.com
+
+---
+
+✨ Este perfil funciona como **vitrine central** para meus projetos, portfólio online e certificações.

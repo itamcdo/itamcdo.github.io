@@ -7,25 +7,46 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  /* Ajuste específico para certificados */
+  /* ===== Cards de Certificados ===== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 24px 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.6);
+  }
+
   .certificate-thumb {
-    width: 48px;        /* tamanho menor, elegante */
+    width: 48px;
     height: 48px;
     object-fit: contain;
     display: block;
-    margin: 0 auto 12px auto; /* centralizado com espaçamento abaixo */
+    margin: 0 auto 14px auto;
   }
 
   .card h3 {
-    margin: 8px 0;
     font-size: 18px;
     color: var(--text);
+    margin: 8px 0 6px 0;
   }
 
   .card p {
     font-size: 14px;
     color: var(--text-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .card-buttons {
@@ -36,6 +57,14 @@
   .card-buttons .button {
     padding: 10px 20px;
     font-size: 14px;
+    border-radius: 8px;
+  }
+
+  /* ===== Responsividade ===== */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
 </head>

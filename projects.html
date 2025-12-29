@@ -13,9 +13,7 @@
       --card: #ffffff;
       --text: #111827;
       --text-secondary: #4b5563;
-      --border: #e5e7eb;
-      --button: #111827;
-      --button-text: #ffffff;
+      --accent: #2563eb;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -24,15 +22,17 @@
         --card: #020617;
         --text: #e5e7eb;
         --text-secondary: #9ca3af;
-        --border: #1e293b;
-        --button: #e5e7eb;
-        --button-text: #020617;
+        --accent: #60a5fa;
       }
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
     }
@@ -42,12 +42,12 @@
       text-align: center;
     }
 
-    h1 {
-      font-size: 40px;
+    header h1 {
+      font-size: 38px;
       margin-bottom: 10px;
     }
 
-    p.subtitle {
+    header p {
       color: var(--text-secondary);
       font-size: 18px;
       max-width: 720px;
@@ -56,104 +56,112 @@
     }
 
     main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px 80px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px 100px;
     }
 
-    /* ===== CARDS ===== */
-    .project {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
       background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 32px;
-      margin-bottom: 40px;
-      transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
     }
 
-    .project:hover {
-      transform: translateY(-6px);
-      box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.12),
-        0 8px 16px rgba(0, 0, 0, 0.06);
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .project.featured {
-      border-width: 2px;
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
     }
 
-    .project h2 {
-      font-size: 26px;
-      margin-bottom: 15px;
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 22px;
     }
 
-    .project p {
-      color: var(--text-secondary);
-      line-height: 1.6;
+    .card .subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
       margin-bottom: 16px;
     }
 
+    .card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .metrics {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .metric {
+      background: rgba(37,99,235,0.08);
+      color: var(--accent);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
     .tags {
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
 
     .tag {
       display: inline-block;
-      background: var(--border);
-      color: var(--text);
+      background: #e5e7eb;
+      color: #111827;
       padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 14px;
-      margin-right: 8px;
-      margin-bottom: 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-right: 6px;
+      margin-bottom: 6px;
     }
 
-    .actions {
-      margin-top: 24px;
+    @media (prefers-color-scheme: dark) {
+      .tag {
+        background: #1e293b;
+        color: #e5e7eb;
+      }
     }
 
-    .actions a {
-      display: inline-block;
-      padding: 12px 22px;
-      background: var(--button);
-      color: var(--button-text);
+    .card a {
       text-decoration: none;
-      border-radius: 10px;
-      font-weight: 500;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .actions a:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
+      font-weight: 600;
+      color: var(--accent);
     }
 
     .back {
+      display: inline-block;
       margin-top: 60px;
       text-align: center;
+      width: 100%;
     }
 
     .back a {
-      color: var(--text-secondary);
       text-decoration: none;
-    }
-
-    .back a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== ANIMAÇÃO AO SCROLL ===== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
+      color: var(--text-secondary);
+      font-weight: 500;
     }
   </style>
 </head>
@@ -162,73 +170,89 @@
 
 <header>
   <h1>Projetos</h1>
-  <p class="subtitle">
-    Soluções em análise de dados, automação de processos e tecnologia
-    aplicadas a problemas reais.
+  <p>
+    Projetos focados em análise de dados, automação de processos, dashboards e
+    desenvolvimento de soluções para suporte à tomada de decisão.
   </p>
 </header>
 
 <main>
+  <div class="grid">
 
-  <!-- PROJETO EM DESTAQUE -->
-  <section class="project featured reveal">
-    <h2>Automação de Recibos com Google Apps Script</h2>
+    <!-- PROJETO 1 -->
+    <div class="card">
+      <h3>Automação de Recibos</h3>
+      <div class="subtitle">Google Apps Script</div>
 
-    <p>
-      Projeto desenvolvido para eliminar processos manuais na geração de recibos,
-      reduzindo erros humanos e aumentando a eficiência operacional.
-    </p>
+      <p>
+        Automação para processamento de recibos financeiros, integração com Google Sheets
+        e padronização de dados, reduzindo esforço manual e aumentando a confiabilidade
+        das informações.
+      </p>
 
-    <p>
-      A automação integra Google Apps Script com Google Sheets, criando,
-      organizando e registrando recibos de forma automática e escalável.
-    </p>
+      <div class="metrics">
+        <div class="metric">⬇️ -70% tempo manual</div>
+        <div class="metric">✔️ +99% consistência</div>
+      </div>
 
-    <div class="tags">
-      <span class="tag">Google Apps Script</span>
-      <span class="tag">Google Sheets</span>
-      <span class="tag">Automação</span>
-      <span class="tag">Processos</span>
-    </div>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">Google Apps Script</span>
+        <span class="tag">Automação</span>
+        <span class="tag">Dados Financeiros</span>
+      </div>
 
-    <div class="actions">
       <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" target="_blank">
-        Ver no GitHub
+        Ver no GitHub →
       </a>
     </div>
-  </section>
 
-  <!-- PROJETO FUTURO -->
-  <section class="project reveal">
-    <h2>Próximos Projetos</h2>
-    <p>
-      Em desenvolvimento: projetos envolvendo análise de dados,
-      dashboards, SQL, Python e visualização estratégica de informações.
-    </p>
-  </section>
+    <!-- PROJETO EXEMPLO -->
+    <div class="card">
+      <h3>Dashboard Operacional Hospitalar</h3>
+      <div class="subtitle">Business Intelligence</div>
+
+      <p>
+        Dashboard analítico para monitoramento de indicadores operacionais e assistenciais,
+        apoiando a gestão hospitalar em ambientes de alta criticidade.
+      </p>
+
+      <div class="metrics">
+        <div class="metric">📊 +15 KPIs</div>
+        <div class="metric">⚡ Tempo real</div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Indicadores</span>
+      </div>
+
+      <a href="#" target="_blank">
+        Projeto interno
+      </a>
+    </div>
+
+  </div>
 
   <div class="back">
     <a href="index.html">← Voltar para o início</a>
   </div>
-
 </main>
 
-<!-- ===== SCRIPT DE SCROLL ===== -->
 <script>
-  const reveals = document.querySelectorAll('.reveal');
+  const cards = document.querySelectorAll('.card');
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
 
-  reveals.forEach(el => observer.observe(el));
+  cards.forEach(card => observer.observe(card));
 </script>
 
 </body>

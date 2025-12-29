@@ -2,59 +2,64 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Certificados | Maria Ita Macêdo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
+      margin: 0;
       color: #111827;
     }
 
-    main {
-      max-width: 1100px;
+    header {
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
-      padding: 80px 20px;
     }
 
     h1 {
       font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #4b5563;
       margin-bottom: 40px;
-      text-align: center;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .card {
-      background: white;
-      border-radius: 16px;
+      background: #ffffff;
       padding: 24px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.12);
     }
 
     .card h3 {
       margin-top: 0;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .card p {
-      color: #4b5563;
-      font-size: 15px;
-      margin-bottom: 20px;
+    .card span {
+      display: block;
+      color: #6b7280;
+      font-size: 14px;
+      margin-bottom: 16px;
     }
 
     .card a {
@@ -67,31 +72,38 @@
 
 <body>
 
-<main>
+<header>
   <h1>Certificados</h1>
+  <p>Formações técnicas e certificações relevantes para Data Analytics e BI.</p>
 
   <div class="grid">
 
     <div class="card">
       <h3>Power BI Avançado</h3>
-      <p>Modelagem de dados, DAX e dashboards analíticos.</p>
-      <a href="certificates/powerbi.pdf" target="_blank">Ver certificado</a>
+      <span>Microsoft / DAX</span>
+      <a href="assets/certificates/powerbi.pdf" target="_blank">
+        Ver certificado →
+      </a>
     </div>
 
     <div class="card">
       <h3>SQL para Análise de Dados</h3>
-      <p>Consultas, joins, agregações e performance.</p>
-      <a href="certificates/sql.pdf" target="_blank">Ver certificado</a>
+      <span>Consultas • Joins • KPIs</span>
+      <a href="assets/certificates/sql.pdf" target="_blank">
+        Ver certificado →
+      </a>
     </div>
 
     <div class="card">
-      <h3>Python para Dados</h3>
-      <p>Análise, automação e scripts.</p>
-      <a href="certificates/python.pdf" target="_blank">Ver certificado</a>
+      <h3>Python para Data Analytics</h3>
+      <span>Pandas • Automação</span>
+      <a href="assets/certificates/python.pdf" target="_blank">
+        Ver certificado →
+      </a>
     </div>
 
   </div>
-</main>
+</header>
 
 </body>
 </html>

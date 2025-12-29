@@ -15,12 +15,12 @@ function animateOnScroll() {
 // Barra de skills animada
 function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
-
   skills.forEach(bar => {
-    const width = bar.getAttribute('style').match(/width:\s*(\d+)%/)[1];
+    const width = bar.getAttribute('data-width');
     bar.style.width = width + '%';
   });
 }
+
 
 // Inicializa animações
 function initAnimations() {

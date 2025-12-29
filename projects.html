@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projetos | Itamar CDO</title>
+  <title>Projetos | Maria Ita Macêdo</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -11,7 +11,7 @@
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #f9fafb;
+      background: #f9fafb;
       color: #111827;
     }
 
@@ -21,48 +21,40 @@
       text-align: center;
     }
 
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 36px;
-    }
-
-    header p {
-      color: #4b5563;
-    }
-
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 60px 20px;
     }
 
-    .card {
+    .project {
       background: #ffffff;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
       margin-bottom: 40px;
     }
 
-    .card h3 {
+    .project h3 {
       margin-top: 0;
     }
 
-    .tags {
-      margin: 15px 0;
+    .project p {
+      color: #4b5563;
     }
 
-    .tag {
+    .tags span {
       display: inline-block;
       background: #e5e7eb;
       padding: 6px 12px;
       border-radius: 20px;
       font-size: 13px;
-      margin-right: 6px;
+      margin: 6px 6px 0 0;
     }
 
     a.button {
       display: inline-block;
+      margin-top: 20px;
       padding: 10px 20px;
       background: #111827;
       color: #ffffff;
@@ -71,83 +63,49 @@
       font-size: 14px;
     }
 
-    a.button:hover {
-      background: #000000;
-    }
-
     .back {
-      margin-top: 40px;
       text-align: center;
-    }
-
-    .back a {
-      color: #111827;
-      text-decoration: none;
-      font-weight: 600;
+      margin-top: 60px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Projetos</h1>
-    <p>Automação, dados e soluções práticas</p>
-  </header>
+<header>
+  <h1>Projetos</h1>
+  <p>Projetos reais aplicados à automação e análise de dados</p>
+</header>
 
-  <!-- CONTEÚDO -->
-  <main class="container">
+<main class="container">
 
-    <!-- PROJETO 1 -->
-    <div class="card">
-      <h3>Automação de Recibos com Google Apps Script</h3>
+  <!-- PROJETO PRINCIPAL -->
+  <div class="project">
+    <h3>Automação de Recibos com Google Apps Script</h3>
+    <p>
+      Sistema automatizado para geração, envio e organização de recibos utilizando
+      Google Apps Script, Google Sheets e Gmail API.
+    </p>
 
-      <p>
-        Sistema automatizado para geração, organização e envio de recibos,
-        utilizando Google Apps Script integrado ao Google Sheets.
-        O projeto reduz erros manuais e economiza tempo operacional.
-      </p>
-
-      <div class="tags">
-        <span class="tag">Google Apps Script</span>
-        <span class="tag">Google Sheets</span>
-        <span class="tag">Automação</span>
-      </div>
-
-      <a class="button"
-         href="https://github.com/itamcdo/google-apps-script-receipt-automation"
-         target="_blank">
-        Ver no GitHub
-      </a>
+    <div class="tags">
+      <span>Google Apps Script</span>
+      <span>Automação</span>
+      <span>Google Sheets</span>
+      <span>Workflow</span>
     </div>
 
-    <!-- PROJETO FUTURO (MODELO) -->
-    <div class="card">
-      <h3>Dashboard Financeiro (em breve)</h3>
+    <a class="button"
+       href="https://github.com/itamcdo/google-apps-script-receipt-automation"
+       target="_blank">
+       Ver no GitHub
+    </a>
+  </div>
 
-      <p>
-        Projeto focado em análise financeira com indicadores,
-        visualizações e suporte à tomada de decisão.
-      </p>
+  <div class="back">
+    <a href="index.html">← Voltar para o início</a>
+  </div>
 
-      <div class="tags">
-        <span class="tag">Power BI</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Análise de Dados</span>
-      </div>
-
-      <a class="button" href="#">
-        Em desenvolvimento
-      </a>
-    </div>
-
-    <!-- VOLTAR -->
-    <div class="back">
-      <a href="index.html">← Voltar para o início</a>
-    </div>
-
-  </main>
+</main>
 
 </body>
 </html>

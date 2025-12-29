@@ -1,4 +1,4 @@
-// Animação de elementos ao scroll
+// Função para animação de elementos ao scroll
 function animateOnScroll() {
   const elements = document.querySelectorAll('[data-animate]');
   const windowHeight = window.innerHeight;
@@ -12,15 +12,15 @@ function animateOnScroll() {
   });
 }
 
-// Barra de skills animada
+// Barra de skills animada (usa data-width)
 function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
+
   skills.forEach(bar => {
     const width = bar.getAttribute('data-width');
     bar.style.width = width + '%';
   });
 }
-
 
 // Inicializa animações
 function initAnimations() {

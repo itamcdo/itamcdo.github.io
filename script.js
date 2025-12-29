@@ -17,8 +17,11 @@ function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
 
   skills.forEach(bar => {
-    const width = bar.getAttribute('style').match(/width:\s*(\d+)%/)[1];
-    bar.style.width = width + '%';
+    const width = bar.getAttribute('data-width') || "80%";
+    // Animação suave com delay
+    setTimeout(() => {
+      bar.style.width = width;
+    }, 300);
   });
 }
 

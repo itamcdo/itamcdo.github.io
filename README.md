@@ -1,13 +1,18 @@
-# 👋 Olá, eu sou Maria Ita Macêdo
+# 💼 Portfólio de Dados - Maria Ita Macêdo
 
-**Analista de Dados & BI** | Power BI | SQL | Python | JavaScript | Node.js | React | Automação de Dados  
+Bem-vindo ao meu **portfólio online**! Aqui você encontra todos os meus projetos, certificados e informações profissionais de forma moderna e interativa.
 
-Atualmente à frente do **Command Center Hospitalar**, atuando com análise, automação e visualização de dados para suporte à decisão estratégica em ambientes críticos.
+🌐 **Acesse online:** [Portfólio Maria Ita Macêdo](https://itamcdo.github.io/portfolio/)
 
 ---
 
-## 💻 Portfólio Online
-🌐 [Acesse meu Portfólio](https://itamcdo.github.io/portfolio/)
+## 🔹 Estrutura do Portfólio
+
+- **`index.html`** – Página inicial com apresentação, foto profissional e links para seções do portfólio  
+- **`projects.html`** – Projetos com cards animados, tecnologias usadas e descrições  
+- **`certificates.html`** – Certificados organizados em cards com links para PDFs  
+- **`skills.html`** – Habilidades técnicas com barras de progresso e timeline de experiência  
+- **`contact.html`** – Formulário de contato e links profissionais  
 
 ---
 
@@ -22,6 +27,17 @@ Atualmente à frente do **Command Center Hospitalar**, atuando com análise, aut
 
 ---
 
+## 🎓 Certificados
+
+📂 Todos disponíveis em: [Certificados](https://itamcdo.github.io/portfolio/certificates.html)
+
+- Coleta e Extração de Dados com Power BI  
+- SQL para Análise de Dados  
+- Python para Data Analytics  
+- Google Apps Script - Automação  
+
+---
+
 ## 🛠 Habilidades Técnicas
 
 **Power BI:** ![Power BI](https://img.shields.io/badge/-Power%20BI-F2C811?style=flat-square&logo=power-bi&logoColor=white)  
@@ -29,16 +45,6 @@ Atualmente à frente do **Command Center Hospitalar**, atuando com análise, aut
 **Python:** ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)  
 **JavaScript / Node.js / React:** ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)  
 **Google Apps Script:** ![GAS](https://img.shields.io/badge/-AppsScript-0F9D58?style=flat-square&logo=google&logoColor=white)  
-
----
-
-## 🎓 Certificados
-📂 [Acesse todos os certificados](https://itamcdo.github.io/portfolio/certificates.html)  
-
-- Coleta e Extração de Dados com Power BI  
-- SQL para Análise de Dados  
-- Python para Data Analytics  
-- Google Apps Script - Automação  
 
 ---
 
@@ -50,4 +56,4 @@ Atualmente à frente do **Command Center Hospitalar**, atuando com análise, aut
 
 ---
 
-✨ Este perfil funciona como **vitrine central** para meus projetos, portfólio online e certificações.
+✨ Este repositório contém **todo o material do portfólio**, desde páginas web até PDFs de certificados, servindo como referência completa da minha carreira em dados e BI.

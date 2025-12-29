@@ -7,7 +7,6 @@
   --accent: #4f46e5;
 }
 
-/* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -75,69 +74,15 @@ p {
   box-shadow: 0 12px 24px rgba(0,0,0,0.7);
 }
 
-/* ===== Skills ===== */
-.skill-bar-bg {
-  background: #374151;
-  border-radius: 12px;
-  height: 20px;
-  overflow: hidden;
-  margin-bottom: 16px;
+/* ===== Skills Icons ===== */
+.skills-icons img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
 }
 
-.skill-bar {
-  height: 20px;
-  border-radius: 12px;
-  width: 0;
-  background: linear-gradient(90deg, #6366f1, #4f46e5);
-  transition: width 1.2s ease-in-out;
-}
-
-.skill-name {
-  font-weight: 600;
-  margin-bottom: 6px;
-  text-align: left;
-  max-width: 400px;
-  margin: 10px auto 4px auto;
-  color: var(--text);
-}
-
-.tooltip {
-  position: absolute;
-  right: 0;
-  top: -28px;
-  background: var(--accent);
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 13px;
-  border-radius: 6px;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(-5px);
-  pointer-events: none;
-}
-
-.skill:hover .tooltip {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== Badges ===== */
-.badge {
-  display: inline-block;
-  margin: 4px 6px 4px 0;
-  padding: 6px 12px;
-  border-radius: 12px;
-  background: #374151;
-  color: var(--primary);
-  font-weight: 500;
-  font-size: 14px;
-  cursor: default;
-  transition: all 0.3s;
-}
-
-.badge:hover {
-  background: var(--primary);
-  color: #fff;
+.skills-icons img:hover {
+  transform: scale(1.1);
 }
 
 /* ===== Profile Image ===== */
@@ -195,7 +140,7 @@ button:hover {
   opacity: 0.85;
 }
 
-/* ===== Grid Projects & Certificates ===== */
+/* ===== Grid ===== */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -203,76 +148,13 @@ button:hover {
   margin-top: 40px;
 }
 
-/* ===== Miniatura do PDF nos certificados ===== */
+/* ===== PDF Icon para certificados ===== */
 .certificate-thumb {
-  width: 48px; 
+  width: 48px;
   height: 48px;
   object-fit: contain;
   margin-bottom: 12px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-/* ===== Highlights / KPIs ===== */
-.highlights {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin: 50px auto 40px auto;
-}
-
-.highlights .card {
-  background: var(--card);
-  padding: 20px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.highlights .card h2 {
-  font-size: 32px;
-  color: var(--accent);
-  margin-bottom: 5px;
-}
-
-.highlights .card p {
-  color: var(--text-secondary);
-}
-
-.highlights .card:hover {
-  transform: translateY(-5px);
-}
-
-/* ===== Social Links ===== */
-.socials {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.socials a {
-  text-decoration: none;
-  color: var(--primary);
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.socials a:hover {
-  color: var(--accent);
-}
-
-/* ===== Responsividade ===== */
-@media (max-width: 768px) {
-  header, main, section {
-    padding: 30px 15px;
-  }
-
-  .highlights {
-    flex-direction: column;
-    align-items: center;
-  }
 }

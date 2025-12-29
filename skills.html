@@ -1,70 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills | Maria Ita Macêdo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* ===== Skills específicos ===== */
-    .skills-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 20px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .skill-card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 16px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.7);
-    }
-
-    .skill-name {
-      font-weight: 600;
-      margin-bottom: 8px;
-      color: var(--text);
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .skill-bar-bg {
-      background: #2b3a5a;
-      border-radius: 12px;
-      height: 16px;
-      overflow: hidden;
-    }
-
-    .skill-bar {
-      height: 16px;
-      border-radius: 12px;
-      width: 0;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      transition: width 1.2s ease-in-out;
-    }
-
-    .skill-percentage {
-      font-size: 12px;
-      color: var(--text-secondary);
-      margin-top: 4px;
-      text-align: right;
-    }
-
-    @media (max-width: 768px) {
-      .skills-grid { width: 90%; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Maria Ita Macêdo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.skills-grid { display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 20px auto; }
+.skill-card { background: var(--card); border-radius: 12px; padding: 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+.skill-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.7); }
+.skill-name { font-weight: 600; margin-bottom: 8px; color: var(--text); display: flex; justify-content: space-between; }
+.skill-bar-bg { background: #2b3a5a; border-radius: 12px; height: 16px; overflow: hidden; }
+.skill-bar { height: 16px; border-radius: 12px; width: 0; background: linear-gradient(90deg, var(--primary), var(--accent)); transition: width 1.2s ease-in-out; }
+@media (max-width: 768px) { .skills-grid { width: 90%; } }
+</style>
 </head>
 <body>
 
@@ -75,103 +25,49 @@
 
 <main>
   <section class="skills-grid" data-animate>
-    <!-- Power BI -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>Power BI</span>
-        <span>90%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="90%"></div>
-      </div>
+      <div class="skill-name"><span>Power BI</span><span>90%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="90%"></div></div>
     </div>
-
-    <!-- Python -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>Python</span>
-        <span>80%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="80%"></div>
-      </div>
+      <div class="skill-name"><span>Python</span><span>80%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="80%"></div></div>
     </div>
-
-    <!-- SQL -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>SQL</span>
-        <span>85%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="85%"></div>
-      </div>
+      <div class="skill-name"><span>SQL</span><span>85%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="85%"></div></div>
     </div>
-
-    <!-- JavaScript -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>JavaScript</span>
-        <span>70%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="70%"></div>
-      </div>
+      <div class="skill-name"><span>JavaScript</span><span>70%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="70%"></div></div>
     </div>
-
-    <!-- Node.js -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>Node.js</span>
-        <span>65%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="65%"></div>
-      </div>
+      <div class="skill-name"><span>Node.js</span><span>65%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="65%"></div></div>
     </div>
-
-    <!-- React -->
     <div class="skill-card">
-      <div class="skill-name">
-        <span>React</span>
-        <span>70%</span>
-      </div>
-      <div class="skill-bar-bg">
-        <div class="skill-bar" data-width="70%"></div>
-      </div>
+      <div class="skill-name"><span>React</span><span>70%</span></div>
+      <div class="skill-bar-bg"><div class="skill-bar" data-width="70%"></div></div>
     </div>
   </section>
 </main>
 
 <script>
-  // Animação das barras de skill
-  function animateSkills() {
-    const skillBars = document.querySelectorAll('.skill-bar');
-    skillBars.forEach(bar => {
-      const width = bar.getAttribute('data-width');
-      setTimeout(() => {
-        bar.style.width = width;
-      }, 300);
-    });
-  }
-
-  // Animação de scroll simples
-  function animateOnScroll() {
-    const elements = document.querySelectorAll('[data-animate]');
-    const windowHeight = window.innerHeight;
-    elements.forEach(el => {
-      const position = el.getBoundingClientRect().top;
-      if(position - windowHeight <= -100){
-        el.classList.add('show');
-      }
-    });
-  }
-
-  window.addEventListener('load', () => {
-    animateSkills();
-    animateOnScroll();
+function animateSkills(){
+  document.querySelectorAll('.skill-bar').forEach(bar=>{
+    const width = bar.getAttribute('data-width');
+    setTimeout(()=>{ bar.style.width = width; },300);
   });
-  window.addEventListener('scroll', animateOnScroll);
+}
+function animateOnScroll(){
+  document.querySelectorAll('[data-animate]').forEach(el=>{
+    if(el.getBoundingClientRect().top - window.innerHeight <= -100){
+      el.classList.add('show');
+    }
+  });
+}
+window.addEventListener('load', ()=>{ animateSkills(); animateOnScroll(); });
+window.addEventListener('scroll', animateOnScroll);
 </script>
 
 </body>

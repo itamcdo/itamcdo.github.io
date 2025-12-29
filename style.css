@@ -1,13 +1,12 @@
 :root {
-  --bg: #0a1f44;        /* Fundo azul escuro */
-  --card: #1e2a47;      /* Cards azul mais claro */
-  --text: #e5e7eb;      /* Texto principal */
-  --text-secondary: #a0aec0; /* Texto secundário */
-  --primary: #4f86f7;   /* Azul vibrante para botões/destaques */
-  --accent: #3b6fd1;    /* Azul complementar */
+  --bg: #0a1f44;
+  --card: #1e2a47;
+  --text: #e5e7eb;
+  --text-secondary: #a0aec0;
+  --primary: #4f86f7;
+  --accent: #3b6fd1;
 }
 
-/* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -22,16 +21,10 @@ header, main, section {
   text-align: center;
 }
 
-h1, h2 {
-  color: var(--text);
-}
+h1, h2 { color: var(--text); }
+p { color: var(--text-secondary); line-height: 1.6; }
 
-p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* ===== Buttons ===== */
+/* ===== Botões ===== */
 .button {
   display: inline-block;
   margin: 10px;
@@ -44,61 +37,52 @@ p {
   transition: transform 0.2s, opacity 0.3s;
 }
 
-.button.secondary {
-  background: var(--accent);
+.button.secondary { background: var(--accent); }
+.button:hover { opacity: 0.85; transform: scale(1.05); }
+
+/* ===== Imagem de perfil ===== */
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+.profile-img:hover { transform: scale(1.05); }
+
+/* ===== Skills ===== */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
 }
 
-.button:hover {
-  opacity: 0.85;
-  transform: scale(1.05);
-}
-
-/* ===== Cards ===== */
-.card {
+.skill-card {
   background: var(--card);
   border-radius: 12px;
-  padding: 20px;
+  padding: 16px;
+  width: 180px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.5);
-  margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
-  opacity: 0;
-  transform: translateY(30px);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover {
+.skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.7);
 }
 
-/* ===== Skills ===== */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  margin-top: 30px;
-}
-
-.skill-card {
-  width: 120px;
-  text-align: center;
-}
-
 .skill-icon {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
 }
 
 .skill-name {
   font-weight: 600;
-  color: var(--text);
   margin-bottom: 6px;
 }
 
@@ -114,118 +98,10 @@ p {
   border-radius: 12px;
   width: 0;
   background: linear-gradient(90deg, var(--primary), var(--accent));
-  transition: width 1.2s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 
-/* ===== Badges ===== */
-.badge {
-  display: inline-block;
-  margin: 4px 6px 4px 0;
-  padding: 6px 12px;
-  border-radius: 12px;
-  background: #2b3a5a;
-  color: var(--primary);
-  font-weight: 500;
-  font-size: 14px;
-  cursor: default;
-  transition: all 0.3s;
-}
-
-.badge:hover {
-  background: var(--primary);
-  color: #fff;
-}
-
-/* ===== Profile Image ===== */
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
-  transition: transform 0.3s;
-}
-
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-/* ===== Contact Form ===== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 500px;
-  margin: auto;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #4b5563;
-  font-size: 16px;
-  width: 100%;
-  background: var(--card);
-  color: var(--text);
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(79,70,229,0.3);
-}
-
-button {
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  background: var(--primary);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-button:hover {
-  opacity: 0.85;
-}
-
-/* ===== Grid Projects & Certificates ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-
-/* Miniatura PDF */
-.certificate-thumb {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin-bottom: 12px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ===== Responsive ===== */
+/* ===== Responsividade ===== */
 @media (max-width: 768px) {
-  .buttons {
-    flex-direction: column;
-  }
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  }
-  .skill-card {
-    width: 100%;
-  }
-  .skill-icon {
-    width: 48px;
-    height: 48px;
-  }
-  header, main, section {
-    padding: 30px 15px;
-  }
+  .skills-grid { flex-direction: column; align-items: center; }
 }

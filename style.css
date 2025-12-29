@@ -1,12 +1,18 @@
+/* ===========================
+   VARIÁVEIS GLOBAIS
+   =========================== */
 :root {
-  --bg: #0a1f44;
-  --card: #1e2a47;
-  --text: #e5e7eb;
-  --text-secondary: #a0aec0;
-  --primary: #4f86f7;
-  --accent: #3b6fd1;
+  --bg: #0a1f44;           /* Fundo azul escuro */
+  --card: #1e2a47;         /* Cards azul levemente mais claro */
+  --text: #e5e7eb;         /* Texto principal */
+  --text-secondary: #a0aec0; /* Texto secundário */
+  --primary: #4f86f7;      /* Azul vibrante para botões/destaques */
+  --accent: #3b6fd1;       /* Azul complementar */
 }
 
+/* ===========================
+   ESTILO GLOBAL
+   =========================== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -21,10 +27,19 @@ header, main, section {
   text-align: center;
 }
 
-h1, h2 { color: var(--text); }
-p { color: var(--text-secondary); line-height: 1.6; }
+h1, h2 {
+  color: var(--text);
+  margin-bottom: 16px;
+}
 
-/* ===== Botões ===== */
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ===========================
+   BOTÕES
+   =========================== */
 .button {
   display: inline-block;
   margin: 10px;
@@ -37,10 +52,18 @@ p { color: var(--text-secondary); line-height: 1.6; }
   transition: transform 0.2s, opacity 0.3s;
 }
 
-.button.secondary { background: var(--accent); }
-.button:hover { opacity: 0.85; transform: scale(1.05); }
+.button.secondary {
+  background: var(--accent);
+}
 
-/* ===== Imagem de perfil ===== */
+.button:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ===========================
+   IMAGEM DE PERFIL
+   =========================== */
 .profile-img {
   width: 160px;
   height: 160px;
@@ -50,9 +73,14 @@ p { color: var(--text-secondary); line-height: 1.6; }
   margin-bottom: 20px;
   transition: transform 0.3s;
 }
-.profile-img:hover { transform: scale(1.05); }
 
-/* ===== Skills ===== */
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===========================
+   SKILLS
+   =========================== */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -68,6 +96,9 @@ p { color: var(--text-secondary); line-height: 1.6; }
   width: 180px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skill-card:hover {
@@ -84,13 +115,16 @@ p { color: var(--text-secondary); line-height: 1.6; }
 .skill-name {
   font-weight: 600;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .skill-bar-bg {
   background: #2b3a5a;
   border-radius: 12px;
   height: 12px;
+  width: 100%;
   overflow: hidden;
+  margin-top: 6px;
 }
 
 .skill-bar {
@@ -101,7 +135,21 @@ p { color: var(--text-secondary); line-height: 1.6; }
   transition: width 1s ease-in-out;
 }
 
-/* ===== Responsividade ===== */
+/* ===========================
+   RESPONSIVIDADE
+   =========================== */
 @media (max-width: 768px) {
-  .skills-grid { flex-direction: column; align-items: center; }
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 80%;
+    text-align: center;
+  }
+
+  header, main, section {
+    padding: 30px 15px;
+  }
 }

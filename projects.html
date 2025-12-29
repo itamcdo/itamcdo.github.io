@@ -13,9 +13,9 @@
       --card: #ffffff;
       --text: #111827;
       --text-secondary: #4b5563;
+      --border: #e5e7eb;
       --button: #111827;
       --button-text: #ffffff;
-      --button-secondary: #e5e7eb;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -24,9 +24,9 @@
         --card: #020617;
         --text: #e5e7eb;
         --text-secondary: #9ca3af;
+        --border: #1e293b;
         --button: #e5e7eb;
         --button-text: #020617;
-        --button-secondary: #1e293b;
       }
     }
 
@@ -38,63 +38,93 @@
     }
 
     header {
-      background: var(--card);
-      padding: 50px 20px;
+      padding: 80px 20px 40px;
       text-align: center;
     }
 
-    .container {
-      max-width: 1000px;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    p.subtitle {
+      color: var(--text-secondary);
+      font-size: 18px;
+      max-width: 700px;
       margin: auto;
-      padding: 60px 20px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
     }
 
     .project {
       background: var(--card);
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
       margin-bottom: 40px;
     }
 
-    .project h3 {
-      margin-top: 0;
+    .project.featured {
+      border-width: 2px;
+    }
+
+    .project h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
     }
 
     .project p {
       color: var(--text-secondary);
       line-height: 1.6;
+      margin-bottom: 16px;
     }
 
-    .tags span {
+    .tags {
+      margin: 20px 0;
+    }
+
+    .tag {
       display: inline-block;
-      background: var(--button-secondary);
+      background: var(--border);
+      color: var(--text);
       padding: 6px 12px;
       border-radius: 20px;
-      font-size: 13px;
-      margin: 6px 6px 0 0;
+      font-size: 14px;
+      margin-right: 8px;
+      margin-bottom: 8px;
     }
 
-    a.button {
+    .actions {
+      margin-top: 24px;
+    }
+
+    .actions a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
+      padding: 12px 22px;
       background: var(--button);
       color: var(--button-text);
       text-decoration: none;
-      border-radius: 8px;
-      font-size: 14px;
+      border-radius: 10px;
+      font-weight: 500;
     }
 
     .back {
-      text-align: center;
+      display: block;
       margin-top: 60px;
+      text-align: center;
     }
 
     .back a {
-      color: var(--text);
+      color: var(--text-secondary);
       text-decoration: none;
-      font-weight: 600;
+    }
+
+    .back a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -103,34 +133,50 @@
 
 <header>
   <h1>Projetos</h1>
-  <p>Projetos reais aplicados à automação e análise de dados</p>
+  <p class="subtitle">
+    Projetos focados em análise de dados, automação de processos e soluções práticas
+    aplicadas a problemas reais.
+  </p>
 </header>
 
-<main class="container">
+<main>
 
-  <!-- PROJETO PRINCIPAL -->
-  <div class="project">
-    <h3>Automação de Recibos com Google Apps Script</h3>
+  <!-- PROJETO EM DESTAQUE -->
+  <section class="project featured">
+    <h2>Automação de Recibos com Google Apps Script</h2>
 
     <p>
-      Solução completa de automação para geração, envio e controle de recibos,
-      integrando Google Apps Script, Google Sheets e Gmail,
-      eliminando processos manuais e reduzindo erros operacionais.
+      Este projeto foi desenvolvido para resolver um problema comum de processos manuais
+      e repetitivos na geração de recibos, que consumiam tempo e estavam sujeitos a erros humanos.
+    </p>
+
+    <p>
+      A solução automatiza a criação, organização e registro de recibos utilizando scripts
+      integrados ao Google Sheets, tornando o processo mais rápido, confiável e escalável.
     </p>
 
     <div class="tags">
-      <span>Google Apps Script</span>
-      <span>Automação</span>
-      <span>Google Sheets</span>
-      <span>Workflow</span>
+      <span class="tag">Google Apps Script</span>
+      <span class="tag">Google Sheets</span>
+      <span class="tag">Automação</span>
+      <span class="tag">Processos</span>
     </div>
 
-    <a class="button"
-       href="https://github.com/itamcdo/google-apps-script-receipt-automation"
-       target="_blank">
-      Ver no GitHub
-    </a>
-  </div>
+    <div class="actions">
+      <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" target="_blank">
+        Ver no GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- FUTUROS PROJETOS -->
+  <section class="project">
+    <h2>Próximos Projetos</h2>
+    <p>
+      Este espaço será utilizado para futuros projetos envolvendo análise de dados,
+      dashboards, SQL, Python e visualização de informações.
+    </p>
+  </section>
 
   <div class="back">
     <a href="index.html">← Voltar para o início</a>

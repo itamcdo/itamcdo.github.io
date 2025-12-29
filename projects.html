@@ -2,67 +2,26 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Projetos | Maria Ita Macêdo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#f9fafb;--card:#ffffff;--text:#111827;--text-secondary:#4b5563;
-    --hover:#2563eb;
-  }
-  @media(prefers-color-scheme:dark){:root{
-    --bg:#0f172a;--card:#020617;--text:#e5e5e5;--text-secondary:#9ca3af;--hover:#3b82f6;
-  }}
-  body{font-family:'Inter',sans-serif;margin:0;background:var(--bg);color:var(--text);}
-  header{padding:60px 20px;max-width:1000px;margin:auto;}
-  h1{font-size:36px;margin-bottom:10px;}
-  p{color:var(--text-secondary);margin-bottom:40px;}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
-  .card{background:var(--card);padding:24px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.06);transition:transform 0.3s ease,box-shadow 0.3s ease,opacity 0.5s ease;opacity:0;animation:fadeIn 0.6s forwards;}
-  .card:nth-child(1){animation-delay:0.1s;}
-  .card:nth-child(2){animation-delay:0.2s;}
-  .card:nth-child(3){animation-delay:0.3s;}
-  .card:nth-child(4){animation-delay:0.4s;}
-  .card:hover{transform:translateY(-6px);box-shadow:0 20px 45px rgba(0,0,0,0.12);}
-  .card h3{margin-top:0;margin-bottom:8px;}
-  .card span{display:block;color:#6b7280;font-size:14px;margin-bottom:16px;}
-  .card a{text-decoration:none;font-weight:500;color:var(--hover);}
-  @keyframes fadeIn{to{opacity:1;}}
-  @media(max-width:600px){header{padding:40px 15px;}}
-</style>
+<title>Projetos | Maria Ita Macêdo</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
   <h1>Projetos</h1>
-  <p>Principais projetos públicos de Data Analytics, Automação e BI. Clique nos links para ver o código no GitHub.</p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Google Apps Script - Automação de Receipts</h3>
-      <span>Google Apps Script, JavaScript, Excel</span>
-      <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" target="_blank">Ver no GitHub →</a>
-    </div>
-
-    <div class="card">
-      <h3>Power BI - Dashboards Analíticos</h3>
-      <span>Power BI, DAX, Modelagem de Dados</span>
-      <a href="https://github.com/itamcdo/power-bi-dashboards" target="_blank">Ver no GitHub →</a>
-    </div>
-
-    <div class="card">
-      <h3>SQL para Análise de Dados</h3>
-      <span>SQL, Consultas, KPIs</span>
-      <a href="https://github.com/itamcdo/sql-analise-dados" target="_blank">Ver no GitHub →</a>
-    </div>
-
-    <div class="card">
-      <h3>Python - Automação de Relatórios</h3>
-      <span>Python, Pandas, Automação</span>
-      <a href="https://github.com/itamcdo/python-data-automation" target="_blank">Ver no GitHub →</a>
-    </div>
-
-  </div>
 </header>
+
+<main>
+  <div class="card">
+    <h2>Google Apps Script - Receipt Automation</h2>
+    <p>Automação de recebimento e organização de dados usando Google Apps Script.</p>
+    <a href="https://github.com/itamcdo/google-apps-script-receipt-automation" class="button">Ver Repositório</a>
+  </div>
+
+  <!-- Adicione outros projetos -->
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

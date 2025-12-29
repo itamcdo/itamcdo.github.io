@@ -1,11 +1,10 @@
-/* ===== VARIÁVEIS DE COR ===== */
 :root {
   --bg: #f9fafb;
   --card: #ffffff;
   --text: #111827;
   --text-secondary: #4b5563;
   --primary: #111827;
-  --accent: #6366F1;
+  --accent: #6366f1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,11 +14,11 @@
     --text: #e5e7eb;
     --text-secondary: #9ca3af;
     --primary: #e5e7eb;
-    --accent: #818cf8;
+    --accent: #4f46e5;
   }
 }
 
-/* ===== ESTILO GLOBAL ===== */
+/* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -35,9 +34,6 @@ header, main, section {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
-}
-
-header {
   text-align: center;
 }
 
@@ -46,13 +42,13 @@ p {
   line-height: 1.6;
 }
 
-/* ===== BOTÕES ===== */
+/* ===== Buttons ===== */
 .button {
   display: inline-block;
   margin: 10px;
   padding: 14px 26px;
-  background: var(--primary);
-  color: #fff;
+  background: #111827; /* escuro no light mode */
+  color: #ffffff;      /* texto branco */
   text-decoration: none;
   border-radius: 10px;
   font-weight: 500;
@@ -61,25 +57,33 @@ p {
 
 .button.secondary {
   background: var(--accent);
-  color: #fff;
+  color: #ffffff;
 }
 
 .button:hover {
   opacity: 0.85;
 }
 
-.button.secondary:hover {
-  background: #4f46e5;
+@media (prefers-color-scheme: dark) {
+  .button {
+    background: #e5e7eb;
+    color: #111827;
+  }
+
+  .button.secondary {
+    background: #4f46e5;
+    color: #ffffff;
+  }
 }
 
-/* ===== CARDS ===== */
+/* ===== Cards ===== */
 .card {
   background: var(--card);
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   margin-bottom: 20px;
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+  transition: transform 0.3s, box-shadow 0.3s;
   opacity: 0;
   transform: translateY(30px);
 }
@@ -94,7 +98,7 @@ p {
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-/* ===== SKILLS ===== */
+/* ===== Skills ===== */
 .skill-bar-bg {
   background: #e5e7eb;
   border-radius: 12px;
@@ -108,12 +112,14 @@ p {
   border-radius: 12px;
   width: 0;
   transition: width 1s ease-in-out;
-  background: var(--accent);
 }
 
 .skill-name {
   font-weight: 600;
   margin-bottom: 6px;
+  text-align: left;
+  max-width: 400px;
+  margin: 10px auto 4px auto;
 }
 
 .tooltip {
@@ -136,7 +142,7 @@ p {
   transform: translateY(0);
 }
 
-/* ===== BADGES ===== */
+/* ===== Badges ===== */
 .badge {
   display: inline-block;
   margin: 4px 6px 4px 0;
@@ -155,7 +161,7 @@ p {
   color: #fff;
 }
 
-/* ===== FOTO DE PERFIL ===== */
+/* ===== Profile Image ===== */
 .profile-img {
   width: 160px;
   height: 160px;
@@ -163,21 +169,14 @@ p {
   object-fit: cover;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   margin-bottom: 20px;
-  transition: transform 0.5s, opacity 0.5s;
-  opacity: 0;
-  transform: translateY(-20px);
-}
-
-.profile-img.show {
-  opacity: 1;
-  transform: translateY(0);
+  transition: transform 0.3s;
 }
 
 .profile-img:hover {
   transform: scale(1.05);
 }
 
-/* ===== FORMULÁRIO DE CONTATO ===== */
+/* ===== Contact Form ===== */
 form {
   display: flex;
   flex-direction: column;
@@ -217,7 +216,7 @@ button:hover {
   opacity: 0.85;
 }
 
-/* ===== REDES SOCIAIS ===== */
+/* ===== Social Links ===== */
 .socials {
   margin-top: 30px;
   display: flex;
@@ -234,16 +233,4 @@ button:hover {
 
 .socials a:hover {
   color: var(--accent);
-}
-
-/* ===== ANIMAÇÃO AO SCROLL ===== */
-[data-animate] {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-[data-animate].show {
-  opacity: 1;
-  transform: translateY(0);
 }

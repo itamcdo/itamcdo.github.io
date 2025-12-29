@@ -50,8 +50,9 @@
     p.subtitle {
       color: var(--text-secondary);
       font-size: 18px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
+      line-height: 1.6;
     }
 
     main {
@@ -60,12 +61,23 @@
       padding: 40px 20px 80px;
     }
 
+    /* ===== CARDS ===== */
     .project {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
+      border-radius: 18px;
       padding: 32px;
       margin-bottom: 40px;
+      transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12),
+        0 8px 16px rgba(0, 0, 0, 0.06);
     }
 
     .project.featured {
@@ -110,10 +122,15 @@
       text-decoration: none;
       border-radius: 10px;
       font-weight: 500;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .actions a:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     .back {
-      display: block;
       margin-top: 60px;
       text-align: center;
     }
@@ -126,6 +143,18 @@
     .back a:hover {
       text-decoration: underline;
     }
+
+    /* ===== ANIMAÇÃO AO SCROLL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -134,7 +163,7 @@
 <header>
   <h1>Projetos</h1>
   <p class="subtitle">
-    Projetos focados em análise de dados, automação de processos e soluções práticas
+    Soluções em análise de dados, automação de processos e tecnologia
     aplicadas a problemas reais.
   </p>
 </header>
@@ -142,17 +171,17 @@
 <main>
 
   <!-- PROJETO EM DESTAQUE -->
-  <section class="project featured">
+  <section class="project featured reveal">
     <h2>Automação de Recibos com Google Apps Script</h2>
 
     <p>
-      Este projeto foi desenvolvido para resolver um problema comum de processos manuais
-      e repetitivos na geração de recibos, que consumiam tempo e estavam sujeitos a erros humanos.
+      Projeto desenvolvido para eliminar processos manuais na geração de recibos,
+      reduzindo erros humanos e aumentando a eficiência operacional.
     </p>
 
     <p>
-      A solução automatiza a criação, organização e registro de recibos utilizando scripts
-      integrados ao Google Sheets, tornando o processo mais rápido, confiável e escalável.
+      A automação integra Google Apps Script com Google Sheets, criando,
+      organizando e registrando recibos de forma automática e escalável.
     </p>
 
     <div class="tags">
@@ -169,12 +198,12 @@
     </div>
   </section>
 
-  <!-- FUTUROS PROJETOS -->
-  <section class="project">
+  <!-- PROJETO FUTURO -->
+  <section class="project reveal">
     <h2>Próximos Projetos</h2>
     <p>
-      Este espaço será utilizado para futuros projetos envolvendo análise de dados,
-      dashboards, SQL, Python e visualização de informações.
+      Em desenvolvimento: projetos envolvendo análise de dados,
+      dashboards, SQL, Python e visualização estratégica de informações.
     </p>
   </section>
 
@@ -183,6 +212,24 @@
   </div>
 
 </main>
+
+<!-- ===== SCRIPT DE SCROLL ===== -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

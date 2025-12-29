@@ -240,6 +240,29 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+
+  /* Miniatura do PDF */
+.certificate-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Botões dentro do card */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Hover suave para botões do card */
+.card-buttons .button, .card-buttons .button.secondary {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
   margin-top: 40px;
 }
 

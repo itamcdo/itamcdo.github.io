@@ -8,12 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== VARIÁVEIS DE COR (LIGHT / DARK) ===== */
+    /* ===== VARIÁVEIS DE COR ===== */
     :root {
       --bg: #f9fafb;
       --card: #ffffff;
       --text: #111827;
       --text-secondary: #4b5563;
+      --border: #e5e7eb;
       --button: #111827;
       --button-text: #ffffff;
       --button-secondary: #e5e7eb;
@@ -25,6 +26,7 @@
         --card: #020617;
         --text: #e5e7eb;
         --text-secondary: #9ca3af;
+        --border: #1e293b;
         --button: #e5e7eb;
         --button-text: #020617;
         --button-secondary: #1e293b;
@@ -44,41 +46,53 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       padding: 40px 20px;
       background: var(--card);
     }
 
     h1 {
       font-size: 44px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     p {
       font-size: 18px;
       color: var(--text-secondary);
-      max-width: 600px;
-      margin: auto;
       line-height: 1.6;
+      max-width: 520px;
     }
 
-    /* ===== FOTO DE PERFIL ===== */
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
+    /* ===== HERO ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .profile {
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
-      margin-bottom: 25px;
-      border: 3px solid var(--button-secondary);
+      object-fit: cover;
+      border: 4px solid var(--card);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 8px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-text {
+      text-align: left;
     }
 
     .buttons {
-      margin-top: 40px;
+      margin-top: 35px;
     }
 
     a.button {
       display: inline-block;
-      margin: 10px;
+      margin-right: 14px;
       padding: 14px 26px;
       background: var(--button);
       color: var(--button-text);
@@ -96,32 +110,50 @@
     a.button:hover {
       opacity: 0.85;
     }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <div>
+  <div class="hero">
 
-    <!-- FOTO -->
-    <img 
-      src="assets/profile.jpg" 
+    <img
+      src="assets/profile.jpeg"
       alt="Foto de Maria Ita Macêdo"
-      class="profile-pic"
+      class="profile"
     />
 
-    <h1>Maria Ita Macêdo</h1>
+    <div class="hero-text">
+      <h1>Maria Ita Macêdo</h1>
 
-    <p>
-      Profissional focada em análise de dados, automação de processos e desenvolvimento
-      de soluções práticas utilizando SQL, Python, Power BI e Google Apps Script.
-    </p>
+      <p>
+        Profissional focada em análise de dados, automação de processos e desenvolvimento
+        de soluções práticas utilizando SQL, Python, Power BI e Google Apps Script.
+      </p>
 
-    <div class="buttons">
-      <a href="projects.html" class="button">Ver Projetos</a>
-      <a href="certificates.html" class="button secondary">Certificados</a>
+      <div class="buttons">
+        <a href="projects.html" class="button">Ver Projetos</a>
+        <a href="certificates.html" class="button secondary">Certificados</a>
+      </div>
     </div>
+
   </div>
 </header>
 

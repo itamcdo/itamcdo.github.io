@@ -4,27 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contato | Maria Ita Macêdo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <h1 data-animate>Contato</h1>
-  <p data-animate>Entre em contato comigo via email, GitHub ou LinkedIn.</p>
+  <p data-animate>
+    Entre em contato comigo para oportunidades em análise de dados, BI e automação.
+  </p>
 </header>
 
 <main>
-  <form data-animate>
-    <input type="text" placeholder="Nome" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Mensagem" rows="6" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
+  <section>
+    <form data-animate>
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" placeholder="Sua mensagem" rows="6" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
 
-  <div class="buttons" data-animate>
-    <a href="https://github.com/seu-usuario" class="button secondary" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/seu-usuario" class="button secondary" target="_blank">LinkedIn</a>
-  </div>
+    <div class="socials" data-animate>
+      <a href="https://www.linkedin.com/in/itamacdo" target="_blank" class="button secondary">LinkedIn</a>
+      <a href="https://github.com/itamcdo" target="_blank" class="button secondary">GitHub</a>
+    </div>
+  </section>
 </main>
 
 <script src="script.js"></script>

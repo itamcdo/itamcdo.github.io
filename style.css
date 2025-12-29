@@ -54,7 +54,7 @@ p {
   text-decoration: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: opacity 0.3s, backgound 0.3s;
+  transition: opacity 0.3s, background 0.3s;
 }
 
 .button.secondary {
@@ -66,8 +66,8 @@ p {
   opacity: 0.85;
 }
 
-.button.secondary:hover [
-  bavkground: #4f46e5;
+.button.secondary:hover {
+  background: #4f46e5;
 }
 
 /* ===== Cards ===== */

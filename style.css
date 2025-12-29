@@ -7,6 +7,7 @@
   --accent: #4f46e5;
 }
 
+/* ===== Global ===== */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -204,11 +205,74 @@ button:hover {
 
 /* ===== Miniatura do PDF nos certificados ===== */
 .certificate-thumb {
-  width: 48px;       /* tamanho menor, mais elegante */
+  width: 48px; 
   height: 48px;
   object-fit: contain;
-  margin-bottom: 12px; /* espaço entre ícone e título */
+  margin-bottom: 12px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* ===== Highlights / KPIs ===== */
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 50px auto 40px auto;
+}
+
+.highlights .card {
+  background: var(--card);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.highlights .card h2 {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.highlights .card p {
+  color: var(--text-secondary);
+}
+
+.highlights .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Social Links ===== */
+.socials {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: var(--accent);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
+  header, main, section {
+    padding: 30px 15px;
+  }
+
+  .highlights {
+    flex-direction: column;
+    align-items: center;
+  }
 }

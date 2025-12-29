@@ -6,69 +6,16 @@
 <title>Skills | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-/* ===== Skills Grid ===== */
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-/* ===== Skill Card ===== */
-.skill-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
-  opacity: 0;
-  transform: translateY(30px);
-  width: 120px;
-}
-
-.skill-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
-}
-
-/* ===== Logos das Skills ===== */
-.skill-card img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-/* ===== Nome da Skill ===== */
-.skill-card span {
-  font-weight: 600;
-  color: var(--text);
-  text-align: center;
-  font-size: 14px;
-}
-</style>
 </head>
 <body>
 
 <header>
   <h1 data-animate>Skills</h1>
-  <p data-animate>
-    Principais habilidades técnicas e ferramentas que utilizo no dia a dia para análise de dados, BI e automação.
-  </p>
+  <p data-animate>Habilidades técnicas e ferramentas que utilizo no dia a dia.</p>
 </header>
 
 <main>
-  <section class="skills-grid">
+  <div class="skills-grid">
     <div class="skill-card" data-animate>
       <img src="assets/powerbi.png" alt="Power BI">
       <span>Power BI</span>
@@ -93,28 +40,9 @@
       <img src="assets/react.png" alt="React">
       <span>React</span>
     </div>
-  </section>
+  </div>
 </main>
 
 <script src="script.js"></script>
-<script>
-// ===== Animação de entrada das skills =====
-function animateSkillsCards() {
-  const skillCards = document.querySelectorAll('.skill-card');
-  const windowHeight = window.innerHeight;
-
-  skillCards.forEach(card => {
-    const positionFromTop = card.getBoundingClientRect().top;
-
-    if (positionFromTop - windowHeight <= -100) {
-      card.classList.add('show');
-    }
-  });
-}
-
-// Inicializa animações específicas das skills
-window.addEventListener('scroll', animateSkillsCards);
-window.addEventListener('load', animateSkillsCards);
-</script>
 </body>
 </html>

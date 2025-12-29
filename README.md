@@ -18,12 +18,6 @@ Sou **Analista de Dados e Business Intelligence**, atualmente à frente do **Com
 ## 💻 Skills
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 5px;">
-  <img src="assets/powerbi.png" alt="Power BI" width="60">
-  <img src="assets/sql.png" alt="SQL" width="60">
-  <img src="assets/python.png" alt="Python" width="60">
-  <img src="assets/javascript.png" alt="JavaScript" width="60">
-  <img src="assets/nodejs.png" alt="Node.js" width="60">
-  <img src="assets/react.png" alt="React" width="60">
 </div>
 
 ---

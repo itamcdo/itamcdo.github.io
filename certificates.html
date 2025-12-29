@@ -42,7 +42,19 @@
       padding: 24px;
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+      opacity: 0;
+      animation: fadeIn 0.6s forwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
 
     .card:hover {
@@ -67,6 +79,12 @@
       font-weight: 500;
       color: #2563eb;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 15px;
+      }
+    }
   </style>
 </head>
 
@@ -74,7 +92,7 @@
 
 <header>
   <h1>Certificados</h1>
-  <p>Formações técnicas e certificações relevantes para Data Analytics e BI.</p>
+  <p>Formações técnicas e certificações relevantes para Data Analytics e Business Intelligence.</p>
 
   <div class="grid">
 
@@ -89,7 +107,7 @@
     <div class="card">
       <h3>SQL para Análise de Dados</h3>
       <span>Consultas • Joins • KPIs</span>
-      <a href="certificates/sql.pdf" target="_blank">
+      <a href="certificates/sql-para-analise-de-dados.pdf" target="_blank">
         Ver certificado →
       </a>
     </div>
@@ -97,7 +115,15 @@
     <div class="card">
       <h3>Python para Data Analytics</h3>
       <span>Pandas • Automação</span>
-      <a href="certificates/python.pdf" target="_blank">
+      <a href="certificates/python-para-data-analytics.pdf" target="_blank">
+        Ver certificado →
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Google Apps Script - Automação</h3>
+      <span>Automação de Processos</span>
+      <a href="certificates/google-apps-script-automacao.pdf" target="_blank">
         Ver certificado →
       </a>
     </div>

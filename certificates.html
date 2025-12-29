@@ -6,111 +6,50 @@
 <title>Certificados | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* ===== Cards de Certificados ===== */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 24px 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.6);
-  }
-
-  .certificate-thumb {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 14px auto;
-  }
-
-  .card h3 {
-    font-size: 18px;
-    color: var(--text);
-    margin: 8px 0 6px 0;
-  }
-
-  .card p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    margin-bottom: 14px;
-  }
-
-  .card-buttons {
-    display: flex;
-    justify-content: center;
-  }
-
-  .card-buttons .button {
-    padding: 10px 20px;
-    font-size: 14px;
-    border-radius: 8px;
-  }
-
-  /* ===== Responsividade ===== */
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
 </head>
 <body>
 
 <header>
   <h1 data-animate>Certificados</h1>
-  <p data-animate>
-    Aqui estão os principais certificados que obtive em cursos, treinamentos e workshops de análise de dados, BI e automação.
-  </p>
+  <p data-animate>Aqui estão os principais certificados que obtive em cursos, treinamentos e workshops.</p>
 </header>
 
 <main>
   <section class="grid">
-    <!-- Certificado Power BI -->
     <div class="card" data-animate>
-      <img src="assets/pdf-icon.png" alt="PDF" class="certificate-thumb">
+      <div class="icon">📄</div>
       <h3>Coleta e Extração de Dados com Power BI</h3>
       <p>Curso focado em coleta, integração e análise de dados usando Power BI.</p>
-      <div class="card-buttons">
-        <a href="certificates/coleta-e-extração-de-dados-com-power-bi.pdf" class="button" target="_blank">Abrir PDF</a>
-      </div>
+      <a href="certificates/coleta-e-extração-de-dados-com-power-bi.pdf" class="button" target="_blank">Abrir PDF</a>
     </div>
 
-    <!-- Certificado Python -->
     <div class="card" data-animate>
-      <img src="assets/pdf-icon.png" alt="PDF" class="certificate-thumb">
+      <div class="icon">📄</div>
       <h3>Python para Análise de Dados</h3>
       <p>Curso de Python aplicado à análise e automação de dados.</p>
-      <div class="card-buttons">
-        <a href="certificates/python-analise-dados.pdf" class="button" target="_blank">Abrir PDF</a>
-      </div>
+      <a href="certificates/python-analise-dados.pdf" class="button" target="_blank">Abrir PDF</a>
     </div>
 
-    <!-- Certificado SQL -->
     <div class="card" data-animate>
-      <img src="assets/pdf-icon.png" alt="PDF" class="certificate-thumb">
+      <div class="icon">📄</div>
       <h3>SQL e Modelagem de Dados</h3>
       <p>Treinamento em SQL, modelagem de dados e criação de queries eficientes.</p>
-      <div class="card-buttons">
-        <a href="certificates/sql-modelagem-dados.pdf" class="button" target="_blank">Abrir PDF</a>
-      </div>
+      <a href="certificates/sql-modelagem-dados.pdf" class="button" target="_blank">Abrir PDF</a>
     </div>
   </section>
 </main>
 
-<script src="script.js"></script>
+<script>
+function animateOnScroll() {
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100) el.classList.add('show');
+  });
+}
+
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
+</script>
+
 </body>
 </html>

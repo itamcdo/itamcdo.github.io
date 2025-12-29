@@ -1,20 +1,16 @@
-// Animação ao scroll
+// Animação de elementos ao scroll (títulos, cards, skills)
 function animateOnScroll() {
-  const elements = document.querySelectorAll('[data-animate]');
+  const elements = document.querySelectorAll('[data-animate], .card, .skill-card');
   const windowHeight = window.innerHeight;
 
   elements.forEach(el => {
     const positionFromTop = el.getBoundingClientRect().top;
+
     if (positionFromTop - windowHeight <= -100) {
       el.classList.add('show');
     }
   });
 }
 
-// Inicializa animações
-function initAnimations() {
-  animateOnScroll();
-}
-
 window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', initAnimations);
+window.addEventListener('load', animateOnScroll);

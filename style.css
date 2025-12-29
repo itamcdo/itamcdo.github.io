@@ -54,16 +54,20 @@ p {
   text-decoration: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, backgound 0.3s;
 }
 
 .button.secondary {
-  background: #e5e7eb;
-  color: var(--text);
+  background: var(--accent);
+  color: #fff;
 }
 
 .button:hover {
   opacity: 0.85;
+}
+
+.button.secondary:hover [
+  bavkground: #4f46e5;
 }
 
 /* ===== Cards ===== */

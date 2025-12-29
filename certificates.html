@@ -8,26 +8,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --text: #111827;
+      --text-secondary: #4b5563;
+      --button: #111827;
+      --button-text: #ffffff;
+      --button-secondary: #e5e7eb;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --card: #020617;
+        --text: #e5e7eb;
+        --text-secondary: #9ca3af;
+        --button: #e5e7eb;
+        --button-text: #020617;
+        --button-secondary: #1e293b;
+      }
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #f9fafb;
-      color: #111827;
+      background: var(--bg);
+      color: var(--text);
     }
 
     header {
-      background: #ffffff;
+      background: var(--card);
       padding: 50px 20px;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      color: #4b5563;
     }
 
     .container {
@@ -37,7 +50,7 @@
     }
 
     .card {
-      background: #ffffff;
+      background: var(--card);
       border-radius: 12px;
       padding: 25px 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.05);
@@ -53,22 +66,18 @@
     }
 
     .card span {
-      color: #6b7280;
+      color: var(--text-secondary);
       font-size: 14px;
     }
 
     a.button {
       padding: 10px 18px;
-      background: #111827;
-      color: #ffffff;
+      background: var(--button);
+      color: var(--button-text);
       text-decoration: none;
       border-radius: 8px;
       font-size: 14px;
       margin-top: 10px;
-    }
-
-    a.button:hover {
-      background: #000000;
     }
 
     .back {
@@ -77,7 +86,7 @@
     }
 
     .back a {
-      color: #111827;
+      color: var(--text);
       text-decoration: none;
       font-weight: 600;
     }
@@ -86,63 +95,42 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Certificados</h1>
-    <p>Formação contínua em dados, tecnologia e automação</p>
-  </header>
+<header>
+  <h1>Certificados</h1>
+  <p>Formação contínua em dados, tecnologia e automação</p>
+</header>
 
-  <!-- CONTEÚDO -->
-  <main class="container">
+<main class="container">
 
-    <!-- CERTIFICADO 1 -->
-    <div class="card">
-      <div>
-        <h3>Google Data Analytics</h3>
-        <span>Google • Coursera</span>
-      </div>
-
-      <a class="button"
-         href="certificates/certificado-google-data.pdf"
-         target="_blank">
-        Abrir PDF
-      </a>
+  <div class="card">
+    <div>
+      <h3>Google Data Analytics</h3>
+      <span>Google • Coursera</span>
     </div>
+    <a class="button"
+       href="certificates/certificado-google-data.pdf"
+       target="_blank">
+      Abrir PDF
+    </a>
+  </div>
 
-    <!-- CERTIFICADO 2 -->
-    <div class="card">
-      <div>
-        <h3>SQL para Análise de Dados</h3>
-        <span>Alura</span>
-      </div>
-
-      <a class="button"
-         href="certificates/certificado-alura-sql.pdf"
-         target="_blank">
-        Abrir PDF
-      </a>
+  <div class="card">
+    <div>
+      <h3>SQL para Análise de Dados</h3>
+      <span>Alura</span>
     </div>
+    <a class="button"
+       href="certificates/certificado-alura-sql.pdf"
+       target="_blank">
+      Abrir PDF
+    </a>
+  </div>
 
-    <!-- CERTIFICADO 3 -->
-    <div class="card">
-      <div>
-        <h3>Power BI para Business Intelligence</h3>
-        <span>Plataforma Online</span>
-      </div>
+  <div class="back">
+    <a href="index.html">← Voltar para o início</a>
+  </div>
 
-      <a class="button"
-         href="certificates/certificado-powerbi.pdf"
-         target="_blank">
-        Abrir PDF
-      </a>
-    </div>
-
-    <!-- VOLTAR -->
-    <div class="back">
-      <a href="index.html">← Voltar para o início</a>
-    </div>
-
-  </main>
+</main>
 
 </body>
 </html>

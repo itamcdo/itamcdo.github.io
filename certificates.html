@@ -50,7 +50,7 @@
     p.subtitle {
       color: var(--text-secondary);
       font-size: 18px;
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
       line-height: 1.6;
     }
@@ -61,53 +61,63 @@
       padding: 40px 20px 80px;
     }
 
-    .cert-grid {
+    /* ===== GRID ===== */
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 32px;
     }
 
-    .cert {
+    /* ===== CARD ===== */
+    .certificate {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-radius: 18px;
+      padding: 28px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
     }
 
-    .cert h2 {
+    .certificate:hover {
+      transform: translateY(-6px);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12),
+        0 8px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .certificate h2 {
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    .cert p {
+    .certificate p {
       color: var(--text-secondary);
       font-size: 15px;
       line-height: 1.5;
-      margin-bottom: 20px;
-    }
-
-    .cert span {
-      font-size: 14px;
-      color: var(--text-secondary);
       margin-bottom: 16px;
     }
 
-    .cert a {
-      align-self: flex-start;
+    .meta {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .certificate a {
+      display: inline-block;
       padding: 10px 18px;
       background: var(--button);
       color: var(--button-text);
       text-decoration: none;
       border-radius: 10px;
-      font-weight: 500;
       font-size: 14px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .cert a:hover {
-      opacity: 0.85;
+    .certificate a:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     .back {
@@ -123,6 +133,18 @@
     .back a:hover {
       text-decoration: underline;
     }
+
+    /* ===== ANIMAÇÃO AO SCROLL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -131,55 +153,47 @@
 <header>
   <h1>Certificados</h1>
   <p class="subtitle">
-    Certificações e cursos complementares focados em dados, tecnologia,
-    automação de processos e análise de informações.
+    Formação contínua em dados, tecnologia, automação e análise estratégica.
   </p>
 </header>
 
 <main>
 
-  <section class="cert-grid">
+  <section class="grid">
 
-    <!-- CERTIFICADO EXEMPLO -->
-    <div class="cert">
-      <div>
-        <h2>Fundamentos de Análise de Dados</h2>
-        <p>
-          Curso introdutório abordando conceitos de análise de dados,
-          organização de informações e interpretação de resultados.
-        </p>
-        <span>Instituição: Em breve</span>
-      </div>
-      <a href="assets/certificates/fundamentos-analise-dados.pdf" target="_blank">
-        Ver certificado (PDF)
+    <div class="certificate reveal">
+      <h2>Google Apps Script para Automação</h2>
+      <p>
+        Criação de scripts para automatizar processos administrativos,
+        integrar planilhas e gerar documentos automaticamente.
+      </p>
+      <div class="meta">Plataforma: Google | Ano: 2024</div>
+      <a href="certificates/google-apps-script.pdf" target="_blank">
+        Ver certificado
       </a>
     </div>
 
-    <div class="cert">
-      <div>
-        <h2>Automação de Processos</h2>
-        <p>
-          Certificação focada na automação de tarefas repetitivas
-          utilizando scripts e ferramentas digitais.
-        </p>
-        <span>Instituição: Em breve</span>
-      </div>
-      <a href="assets/certificates/automacao-processos.pdf" target="_blank">
-        Ver certificado (PDF)
+    <div class="certificate reveal">
+      <h2>Power BI para Análise de Dados</h2>
+      <p>
+        Modelagem de dados, criação de dashboards interativos
+        e análise de indicadores de desempenho.
+      </p>
+      <div class="meta">Plataforma: Microsoft | Ano: 2024</div>
+      <a href="certificates/power-bi.pdf" target="_blank">
+        Ver certificado
       </a>
     </div>
 
-    <div class="cert">
-      <div>
-        <h2>Visualização de Dados</h2>
-        <p>
-          Curso voltado para criação de dashboards e apresentação
-          visual de dados para tomada de decisão.
-        </p>
-        <span>Instituição: Em breve</span>
-      </div>
-      <a href="assets/certificates/visualizacao-dados.pdf" target="_blank">
-        Ver certificado (PDF)
+    <div class="certificate reveal">
+      <h2>SQL para Análise de Dados</h2>
+      <p>
+        Consultas avançadas, joins, agregações e análise exploratória
+        em bases relacionais.
+      </p>
+      <div class="meta">Plataforma: Alura | Ano: 2023</div>
+      <a href="certificates/sql.pdf" target="_blank">
+        Ver certificado
       </a>
     </div>
 
@@ -190,6 +204,24 @@
   </div>
 
 </main>
+
+<!-- ===== SCRIPT SCROLL ===== -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>

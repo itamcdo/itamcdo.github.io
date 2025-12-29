@@ -11,8 +11,6 @@ Analista de Dados & BI, atualmente à frente do **Command Center Hospitalar**. A
 
 **Skills:** Power BI, SQL, Python, JavaScript, Node.js, React, Google Apps Script  
 
-![Profile](https://raw.githubusercontent.com/itamcdo/portfolio/main/assets/profile.jpeg){: style="width:150px; border-radius:50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"}  
-
 ---
 
 ## 🔹 Projetos em Destaque

@@ -51,27 +51,49 @@
     }
 
     .skill {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      position: relative;
     }
 
     .skill-name {
       font-weight: 600;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .skill-bar-bg {
       background: #e5e7eb;
-      border-radius: 10px;
-      height: 16px;
+      border-radius: 12px;
+      height: 18px;
       overflow: hidden;
+      position: relative;
     }
 
     .skill-bar {
-      height: 16px;
-      border-radius: 10px;
-      background: #111827;
+      height: 18px;
+      border-radius: 12px;
       width: 0;
-      transition: width 1s ease-in-out;
+      transition: width 1.2s ease-in-out;
+      position: relative;
+    }
+
+    .tooltip {
+      position: absolute;
+      right: 0;
+      top: -28px;
+      background: #111827;
+      color: #fff;
+      padding: 4px 8px;
+      font-size: 13px;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateY(-5px);
+      pointer-events: none;
+    }
+
+    .skill:hover .tooltip {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Badges */
@@ -84,7 +106,8 @@
       color: #111827;
       font-weight: 500;
       font-size: 14px;
-      transition: background 0.3s;
+      transition: all 0.3s;
+      cursor: default;
     }
 
     .badge:hover {
@@ -109,13 +132,17 @@
     <div class="skill">
       <div class="skill-name">Power BI</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 90%; background:#F2C811;"></div>
+        <div class="skill-bar" style="width: 90%; background:#F2C811;">
+          <span class="tooltip">90%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">Excel Avançado</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 95%; background:#217346;"></div>
+        <div class="skill-bar" style="width: 95%; background:#217346;">
+          <span class="tooltip">95%</span>
+        </div>
       </div>
     </div>
   </section>
@@ -126,13 +153,17 @@
     <div class="skill">
       <div class="skill-name">SQL</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 90%; background:#4479A1;"></div>
+        <div class="skill-bar" style="width: 90%; background:#4479A1;">
+          <span class="tooltip">90%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">Modelagem de Dados</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 85%; background:#6366F1;"></div>
+        <div class="skill-bar" style="width: 85%; background:#6366F1;">
+          <span class="tooltip">85%</span>
+        </div>
       </div>
     </div>
   </section>
@@ -143,31 +174,41 @@
     <div class="skill">
       <div class="skill-name">Python</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 90%; background:#3776AB;"></div>
+        <div class="skill-bar" style="width: 90%; background:#3776AB;">
+          <span class="tooltip">90%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">JavaScript</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 85%; background:#F7DF1E;"></div>
+        <div class="skill-bar" style="width: 85%; background:#F7DF1E;">
+          <span class="tooltip">85%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">Node.js</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 80%; background:#339933;"></div>
+        <div class="skill-bar" style="width: 80%; background:#339933;">
+          <span class="tooltip">80%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">React</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 80%; background:#61DAFB;"></div>
+        <div class="skill-bar" style="width: 80%; background:#61DAFB;">
+          <span class="tooltip">80%</span>
+        </div>
       </div>
     </div>
     <div class="skill">
       <div class="skill-name">Google Apps Script</div>
       <div class="skill-bar-bg">
-        <div class="skill-bar" style="width: 85%; background:#0F9D58;"></div>
+        <div class="skill-bar" style="width: 85%; background:#0F9D58;">
+          <span class="tooltip">85%</span>
+        </div>
       </div>
     </div>
   </section>
@@ -185,14 +226,14 @@
 </main>
 
 <script>
-  // Animação de barras ao carregar
+  // Animação das barras de proficiência
   window.addEventListener('DOMContentLoaded', () => {
     const bars = document.querySelectorAll('.skill-bar');
     bars.forEach(bar => {
-      const width = bar.style.width;
+      const targetWidth = bar.style.width;
       bar.style.width = '0';
       setTimeout(() => {
-        bar.style.width = width;
+        bar.style.width = targetWidth;
       }, 100);
     });
   });

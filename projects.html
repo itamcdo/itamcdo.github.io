@@ -6,88 +6,49 @@
 <title>Projetos | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* ===== Cards de Projetos ===== */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: 14px;
-    padding: 24px 16px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-  }
-
-  .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.6);
-  }
-
-  .card h3 {
-    font-size: 18px;
-    color: var(--text);
-    margin: 8px 0 6px 0;
-  }
-
-  .card p {
-    font-size: 14px;
-    color: var(--text-secondary);
-  }
-
-  @media (max-width: 768px) {
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>
 </head>
 <body>
 
 <header>
   <h1 data-animate>Projetos</h1>
-  <p data-animate>
-    Aqui estão alguns dos projetos que desenvolvi em análise de dados, BI e automação.
-  </p>
+  <p data-animate>Aqui estão alguns dos projetos que desenvolvi em análise de dados, BI e automação.</p>
 </header>
 
 <main>
   <section class="grid">
-    <!-- Projeto 1 -->
     <div class="card" data-animate>
-      <img src="assets/dashboard-icon.png" alt="Dashboard" class="certificate-thumb">
       <h3>Command Center</h3>
       <p>Dashboard analítico para monitoramento de KPIs operacionais e assistenciais.</p>
     </div>
 
-    <!-- Projeto 2 -->
     <div class="card" data-animate>
-      <img src="assets/python-icon.png" alt="Python" class="certificate-thumb">
       <h3>Automação de Relatórios</h3>
       <p>Scripts em Python e Google Apps Script para geração automática de relatórios semanais.</p>
     </div>
 
-    <!-- Projeto 3 -->
     <div class="card" data-animate>
-      <img src="assets/etl-icon.png" alt="ETL" class="certificate-thumb">
       <h3>Integração de Dados</h3>
       <p>ETL para integração de múltiplas fontes de dados hospitalares em um repositório único.</p>
     </div>
 
-    <!-- Projeto 4 -->
     <div class="card" data-animate>
-      <img src="assets/powerbi-icon.png" alt="Power BI" class="certificate-thumb">
       <h3>Visualizações Power BI</h3>
       <p>Criação de dashboards interativos para suporte à tomada de decisão.</p>
     </div>
   </section>
 </main>
 
-<script src="script.js"></script>
+<script>
+function animateOnScroll() {
+  document.querySelectorAll('[data-animate]').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100) el.classList.add('show');
+  });
+}
+
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
+</script>
+
 </body>
 </html>

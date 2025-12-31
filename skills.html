@@ -9,13 +9,13 @@
 </head>
 <body>
 
-<header>
+<header class="hero">
   <h1 data-animate>Minhas Skills</h1>
   <p data-animate>Principais habilidades técnicas com suas porcentagens de proficiência.</p>
 </header>
 
 <main>
-  <section class="grid">
+  <section class="highlights grid">
     <div class="card skill-card" data-animate>
       <div class="skill-icon">📊</div>
       <div class="skill-name"><span>Power BI</span><span>100%</span></div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="card skill-card" data-animate>
-      <div class="skill-icon">｡🇯‌🇸‌</div>
+      <div class="skill-icon">🇯‍🇸</div>
       <div class="skill-name"><span>JavaScript</span><span>90%</span></div>
       <div class="skill-bar-bg"><div class="skill-bar" data-width="90%"></div></div>
     </div>
@@ -46,7 +46,7 @@
       <div class="skill-bar-bg"><div class="skill-bar" data-width="80%"></div></div>
     </div>
 
- <div class="card skill-card" data-animate>
+    <div class="card skill-card" data-animate>
       <div class="skill-icon">☕</div>
       <div class="skill-name"><span>Java</span><span>80%</span></div>
       <div class="skill-bar-bg"><div class="skill-bar" data-width="80%"></div></div>
@@ -60,6 +60,10 @@
   </section>
 </main>
 
+<footer>
+  <p>© 2026 — Maria Ita Macêdo</p>
+</footer>
+
 <script>
 function animateSkills() {
   document.querySelectorAll('.skill-bar').forEach(bar => {
@@ -71,9 +75,7 @@ function animateSkills() {
 function animateOnScroll() {
   document.querySelectorAll('[data-animate]').forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100) {
-      el.classList.add('show');
-    }
+    if(top < window.innerHeight - 100) el.classList.add('show');
   });
 }
 

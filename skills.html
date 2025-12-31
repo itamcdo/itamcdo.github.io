@@ -64,37 +64,6 @@
   <p>© 2026 — Maria Ita Macêdo</p>
 </footer>
 
-<script>
-// ==========================
-// Animação de elementos ao scroll
-// ==========================
-function animateOnScroll() {
-  document.querySelectorAll('[data-animate]:not(.show)').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100) el.classList.add('show');
-  });
-}
-
-// ==========================
-// Animação das barras de skills
-// ==========================
-function animateSkills() {
-  document.querySelectorAll('.skill-bar').forEach(bar => {
-    const width = bar.getAttribute('data-width');
-    setTimeout(() => { bar.style.width = width; }, 300);
-  });
-}
-
-// ==========================
-// Inicialização geral
-// ==========================
-window.addEventListener('load', () => {
-  animateSkills();
-  animateOnScroll();
-});
-
-window.addEventListener('scroll', animateOnScroll);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

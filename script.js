@@ -1,5 +1,5 @@
 // ==========================
-// Animação ao carregar a página (hero)
+// Animação ao carregar a página (hero e cards)
 // ==========================
 function animateOnLoad() {
   const elements = document.querySelectorAll('[data-animate]');
@@ -18,7 +18,6 @@ function animateOnScroll() {
 
   elements.forEach(el => {
     const positionFromTop = el.getBoundingClientRect().top;
-
     if (positionFromTop < windowHeight - 100) {
       el.classList.add('show');
     }
@@ -30,10 +29,9 @@ function animateOnScroll() {
 // ==========================
 function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
-
   skills.forEach(bar => {
     const width = bar.getAttribute('data-width');
-    bar.style.width = width;
+    setTimeout(() => { bar.style.width = width; }, 300);
   });
 }
 
@@ -43,10 +41,11 @@ function animateSkills() {
 function initAnimations() {
   animateOnLoad();
   animateSkills();
+  animateOnScroll();
 }
 
 // ==========================
-// Eventos
+// Eventos globais
 // ==========================
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', initAnimations);

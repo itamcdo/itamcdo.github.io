@@ -15,13 +15,13 @@
 </header>
 
 <main>
-  <section class="highlights grid">
+  <section class="certificates-grid" data-animate>
     <div class="card skill-card" data-animate>
       <div class="skill-icon">📊</div>
       <div class="skill-name"><span>Power BI</span><span>100%</span></div>
       <div class="skill-bar-bg"><div class="skill-bar" data-width="100%"></div></div>
     </div>
-    
+
     <div class="card skill-card" data-animate>
       <div class="skill-icon">🐍</div>
       <div class="skill-name"><span>Python</span><span>95%</span></div>
@@ -51,7 +51,7 @@
       <div class="skill-name"><span>Java</span><span>80%</span></div>
       <div class="skill-bar-bg"><div class="skill-bar" data-width="80%"></div></div>
     </div>
-    
+
     <div class="card skill-card" data-animate>
       <div class="skill-icon">⚛️</div>
       <div class="skill-name"><span>React</span><span>75%</span></div>
@@ -65,6 +65,19 @@
 </footer>
 
 <script>
+// ==========================
+// Animação de elementos ao scroll
+// ==========================
+function animateOnScroll() {
+  document.querySelectorAll('[data-animate]:not(.show)').forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100) el.classList.add('show');
+  });
+}
+
+// ==========================
+// Animação das barras de skills
+// ==========================
 function animateSkills() {
   document.querySelectorAll('.skill-bar').forEach(bar => {
     const width = bar.getAttribute('data-width');
@@ -72,14 +85,14 @@ function animateSkills() {
   });
 }
 
-function animateOnScroll() {
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100) el.classList.add('show');
-  });
-}
+// ==========================
+// Inicialização geral
+// ==========================
+window.addEventListener('load', () => {
+  animateSkills();
+  animateOnScroll();
+});
 
-window.addEventListener('load', () => { animateSkills(); animateOnScroll(); });
 window.addEventListener('scroll', animateOnScroll);
 </script>
 

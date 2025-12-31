@@ -6,41 +6,83 @@
 <title>Projetos | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* Grid de projetos */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
+}
+
+/* Cards de projeto */
+.card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Ícone ou imagem do projeto */
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile: cards ocupam quase toda largura */
+@media (max-width: 400px) {
+  .card {
+    min-width: 90%;
+  }
+}
+</style>
 </head>
 <body>
 
-<header>
+<header class="hero">
   <h1 data-animate>Projetos</h1>
-  <p data-animate>Aqui estão alguns dos projetos que desenvolvi em análise de dados, BI e automação.</p>
+  <p data-animate>Aqui estão alguns projetos em que trabalhei, incluindo análise de dados, automações e dashboards.</p>
 </header>
 
 <main>
-  <section class="grid">
+  <section class="projects-grid" data-animate>
     <div class="card" data-animate>
       <div class="icon">📊</div>
-      <h3>Command Center</h3>
-      <p>Dashboard analítico para monitoramento de KPIs operacionais e assistenciais.</p>
+      <h3>Command Center Hospitalar</h3>
+      <p>Dashboard integrado de monitoramento hospitalar com Power BI e automações em Python para coleta de dados em tempo real.</p>
+      <a href="projects/command-center.html" class="button secondary">Ver Projeto</a>
     </div>
 
     <div class="card" data-animate>
-      <div class="icon">🤖</div>
-      <h3>Automação de Relatórios</h3>
-      <p>Scripts em Python e Google Apps Script para geração automática de relatórios semanais.</p>
+      <div class="icon">📄</div>
+      <h3>Recibos Automáticos</h3>
+      <p>Automação em Google Apps Script que gera recibos a partir de uma planilha do Google Sheets.</p>
+      <a href="projects/recibos.html" class="button secondary">Ver Projeto</a>
     </div>
 
     <div class="card" data-animate>
-      <div class="icon">💾</div>
-      <h3>Integração de Dados</h3>
-      <p>ETL para integração de múltiplas fontes de dados hospitalares em um repositório único.</p>
-    </div>
-
-    <div class="card" data-animate>
-      <div class="icon">📈</div>
-      <h3>Visualizações Power BI</h3>
-      <p>Criação de dashboards interativos para suporte à tomada de decisão.</p>
+      <div class="icon">🛠️</div>
+      <h3>Pipeline de Dados</h3>
+      <p>Integração e tratamento de dados de múltiplas fontes usando Python e SQL para alimentar dashboards estratégicos.</p>
+      <a href="projects/pipeline.html" class="button secondary">Ver Projeto</a>
     </div>
   </section>
 </main>
+
+<footer>
+  <p>© 2026 — Maria Ita Macêdo</p>
+</footer>
 
 <script>
 function animateOnScroll() {

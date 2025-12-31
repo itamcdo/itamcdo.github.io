@@ -190,3 +190,37 @@ footer {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ==========================
+   CARDS DE CERTIFICADOS COMPACTOS
+========================== */
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centraliza os cards */
+  gap: 1rem; /* espaçamento menor entre os cards */
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
+}
+
+.certificates-grid .card {
+  flex: 0 1 280px; /* largura compacta */
+  padding: 1rem;   /* padding interno menor */
+  font-size: 0.95rem;
+}
+
+.certificates-grid .card h3 {
+  font-size: 1rem; /* título menor */
+  margin-bottom: 0.5rem;
+}
+
+.certificates-grid .card p {
+  font-size: 0.85rem; /* descrição menor */
+  margin-bottom: 0.8rem;
+}
+
+.certificates-grid .card .button.secondary {
+  padding: 0.5rem 1rem; /* botão menor */
+  font-size: 0.85rem;
+}

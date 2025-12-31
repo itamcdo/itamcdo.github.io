@@ -56,16 +56,12 @@ body {
   transition: transform 0.3s ease;
 }
 
-.profile-img:hover {
-  transform: scale(1.05);
-}
+.profile-img:hover { transform: scale(1.05); }
 
 /* ==========================
    BOTÕES
 ========================== */
-.buttons {
-  margin-top: 2rem;
-}
+.buttons { margin-top: 2rem; }
 
 .button {
   text-decoration: none;
@@ -104,21 +100,22 @@ body {
 /* ==========================
    GRID / CARDS
 ========================== */
-.highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
+.certificates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
 }
 
 .card {
   background: #020617;
   border: 1px solid #1e293b;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -189,38 +186,4 @@ footer {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* ==========================
-   CARDS DE CERTIFICADOS COMPACTOS
-========================== */
-.certificates-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centraliza os cards */
-  gap: 1rem; /* espaçamento menor entre os cards */
-  margin: 2rem auto;
-  padding: 0 1rem;
-  max-width: 900px;
-}
-
-.certificates-grid .card {
-  flex: 0 1 280px; /* largura compacta */
-  padding: 1rem;   /* padding interno menor */
-  font-size: 0.95rem;
-}
-
-.certificates-grid .card h3 {
-  font-size: 1rem; /* título menor */
-  margin-bottom: 0.5rem;
-}
-
-.certificates-grid .card p {
-  font-size: 0.85rem; /* descrição menor */
-  margin-bottom: 0.8rem;
-}
-
-.certificates-grid .card .button.secondary {
-  padding: 0.5rem 1rem; /* botão menor */
-  font-size: 0.85rem;
 }

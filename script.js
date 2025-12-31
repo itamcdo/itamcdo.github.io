@@ -16,9 +16,14 @@ function animateOnScroll() {
   const elements = document.querySelectorAll('[data-animate]:not(.show)');
   const windowHeight = window.innerHeight;
 
-  elements.forEach(el => {
+  elements.forEach((el, index) => {
     const positionFromTop = el.getBoundingClientRect().top;
-    if (positionFromTop < windowHeight - 100) el.classList.add('show');
+    if (positionFromTop < windowHeight - 100) {
+      // delay sequencial ao aparecer no scroll
+      setTimeout(() => {
+        el.classList.add('show');
+      }, index * 100);
+    }
   });
 }
 
@@ -27,9 +32,11 @@ function animateOnScroll() {
 // ==========================
 function animateSkills() {
   const skills = document.querySelectorAll('.skill-bar');
-  skills.forEach(bar => {
+  skills.forEach((bar, index) => {
     const width = bar.getAttribute('data-width');
-    setTimeout(() => { bar.style.width = width; }, 300);
+    setTimeout(() => {
+      bar.style.width = width;
+    }, index * 150); // animação sequencial das barras
   });
 }
 

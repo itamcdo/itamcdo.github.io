@@ -119,6 +119,14 @@ body {
   font-size: 0.95rem;
   min-width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* invisível inicial */
+  transform: translateY(20px) scale(0.95); /* efeito pop */
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.5s cubic-bezier(0.25, 1.25, 0.5, 1); /* leve elástico */
 }
 
 .card:hover {
@@ -190,7 +198,7 @@ footer {
 /* ==========================
    MEDIA QUERIES PARA MOBILE
 ========================== */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .card {
     min-width: 90%; /* Cards ocupam quase toda largura da tela */
   }

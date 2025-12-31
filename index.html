@@ -27,7 +27,7 @@
 <!-- ==========================
      DESTAQUES / CONQUISTAS
 ========================== -->
-<section class="cards-grid" data-animate>
+<section class="cards-grid">
   <div class="card" data-animate>
     <div class="icon">📊</div>
     <h3>Projetos Concluídos</h3>
@@ -48,7 +48,7 @@
 <!-- ==========================
      ÚLTIMOS PROJETOS
 ========================== -->
-<section class="cards-grid" data-animate>
+<section class="cards-grid">
   <div class="card" data-animate>
     <h3>Command Center Hospitalar</h3>
     <p>Automação e visualização de dados em tempo real para suporte à decisão.</p>
@@ -64,7 +64,7 @@
 <!-- ==========================
      SKILLS / BADGES
 ========================== -->
-<section class="cards-grid" data-animate>
+<section class="cards-grid">
   <div class="card" data-animate>🐍 Python</div>
   <div class="card" data-animate>🛢 SQL</div>
   <div class="card" data-animate>📊 Power BI</div>
@@ -76,6 +76,25 @@
   <p>© 2026 — Maria Ita Macêdo</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function animateOnScroll() {
+  const elements = document.querySelectorAll('[data-animate]:not(.show)');
+  const windowHeight = window.innerHeight;
+
+  elements.forEach((el, index) => {
+    const positionFromTop = el.getBoundingClientRect().top;
+
+    if (positionFromTop < windowHeight - 100) {
+      setTimeout(() => {
+        el.classList.add('show');
+      }, index * 150); // delay sequencial
+    }
+  });
+}
+
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
+</script>
+
 </body>
 </html>

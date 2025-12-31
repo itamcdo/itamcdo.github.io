@@ -1,187 +1,112 @@
-/* ===========================
-   VARIÁVEIS GLOBAIS
-   =========================== */
-:root {
-  --bg: #0a1f44;             /* Fundo azul escuro */
-  --card: #1e2a47;           /* Cards azul levemente mais claro */
-  --text: #e5e7eb;           /* Texto principal */
-  --text-secondary: #a0aec0; /* Texto secundário */
-  --primary: #4f86f7;        /* Azul vibrante para botões/destaques */
-  --accent: #3b6fd1;         /* Azul complementar */
-}
-
-/* ===========================
-   ESTILO GLOBAL
-   =========================== */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-}
-
-header, main, section {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  background: linear-gradient(180deg, #0f172a, #020617);
+  color: #e5e7eb;
   text-align: center;
 }
 
-h1, h2 {
-  color: var(--text);
-  margin-bottom: 16px;
+.hero {
+  padding: 5rem 1.5rem 3rem;
 }
 
-p {
-  color: var(--text-secondary);
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid #3b82f6;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  color: #c7d2fe;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 1.2rem auto;
   line-height: 1.6;
+  color: #cbd5f5;
 }
 
-/* ===========================
-   BOTÕES
-   =========================== */
+.buttons {
+  margin-top: 2rem;
+}
+
 .button {
-  display: inline-block;
-  margin: 10px;
-  padding: 14px 26px;
-  background: var(--primary);
-  color: #fff;
   text-decoration: none;
-  border-radius: 10px;
-  font-weight: 500;
-  transition: transform 0.2s, opacity 0.3s;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button.primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.button.primary:hover {
+  background: #2563eb;
 }
 
 .button.secondary {
-  background: var(--accent);
+  border: 1px solid #64748b;
+  color: #e5e7eb;
 }
 
-.button:hover {
-  opacity: 0.85;
-  transform: scale(1.05);
+.button.secondary:hover {
+  background: #1e293b;
 }
 
-/* ===========================
-   IMAGEM DE PERFIL
-   =========================== */
-.profile-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-  margin-bottom: 20px;
-  transition: transform 0.3s;
-}
-
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-/* ===========================
-   GRID DE CARDS (Skills, Projetos, Certificados)
-   =========================== */
-.grid {
+.highlights {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
   max-width: 900px;
-  margin: 20px auto;
-  justify-content: center;
-  justify-items: center;
-  padding: 0 20px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
 }
 
-/* ===========================
-   CARD PADRÃO
-   =========================== */
 .card {
-  background: var(--card);
-  border-radius: 16px;
-  padding: 24px 20px;
-  width: 100%;
-  max-width: 300px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  opacity: 0;              /* animação ao scroll */
-  transform: translateY(30px);
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-}
-
-/* ===========================
-   ICONES NOS CARDS
-   =========================== */
-.card .icon, .skill-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
-}
-
-/* ===========================
-   SKILL CARD
-   =========================== */
-.skill-card {
-  width: 100%;
-}
-
-.skill-name {
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-size: 1.1rem;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.skill-bar-bg {
-  background: #2b3a5a;
+  background: #020617;
+  border: 1px solid #1e293b;
+  padding: 1.5rem;
   border-radius: 12px;
-  height: 16px;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 8px;
+  font-size: 1rem;
 }
 
-.skill-bar {
-  height: 16px;
-  border-radius: 12px;
-  width: 0;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  transition: width 1.5s ease-in-out;
+footer {
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
 }
 
-/* ===========================
-   RESPONSIVIDADE
-   =========================== */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
+/* animações */
+.animate {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards;
+}
 
-  .button {
-    width: 80%;
-    text-align: center;
-  }
-
-  header, main, section {
-    padding: 30px 15px;
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

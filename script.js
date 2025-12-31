@@ -18,9 +18,7 @@ function animateOnScroll() {
 
   elements.forEach(el => {
     const positionFromTop = el.getBoundingClientRect().top;
-    if (positionFromTop < windowHeight - 100) {
-      el.classList.add('show');
-    }
+    if (positionFromTop < windowHeight - 100) el.classList.add('show');
   });
 }
 

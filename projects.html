@@ -6,57 +6,19 @@
 <title>Projetos | Maria Ita Macêdo</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-/* Grid de projetos */
-.projects-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  max-width: 900px;
-}
-
-/* Cards de projeto */
-.card {
-  background: #020617;
-  border: 1px solid #1e293b;
-  padding: 1rem;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  min-width: 250px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-}
-
-/* Ícone ou imagem do projeto */
-.card .icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Mobile: cards ocupam quase toda largura */
-@media (max-width: 400px) {
-  .card {
-    min-width: 90%;
-  }
-}
-</style>
 </head>
 <body>
 
 <header class="hero">
   <h1 data-animate>Projetos</h1>
-  <p data-animate>Aqui estão alguns projetos em que trabalhei, incluindo análise de dados, automações e dashboards.</p>
+  <p class="subtitle" data-animate>
+    Aqui estão alguns projetos em que trabalhei, incluindo análise de dados, automações e dashboards.
+  </p>
 </header>
 
 <main>
-  <section class="projects-grid" data-animate>
+  <!-- Usando mesma classe de grid unificada "cards-grid" -->
+  <section class="cards-grid">
     <div class="card" data-animate>
       <div class="icon">📊</div>
       <h3>Command Center Hospitalar</h3>
@@ -84,17 +46,6 @@
   <p>© 2026 — Maria Ita Macêdo</p>
 </footer>
 
-<script>
-function animateOnScroll() {
-  document.querySelectorAll('[data-animate]').forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if(top < window.innerHeight - 100) el.classList.add('show');
-  });
-}
-
-window.addEventListener('load', animateOnScroll);
-window.addEventListener('scroll', animateOnScroll);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

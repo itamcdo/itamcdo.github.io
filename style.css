@@ -259,3 +259,13 @@ footer {
 .certificates-grid .card {
   max-width: 260px;
 }
+
+@media (max-width: 600px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificates-grid .card {
+    max-width: 100%;
+  }
+}

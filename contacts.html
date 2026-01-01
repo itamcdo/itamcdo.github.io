@@ -125,38 +125,32 @@
     </p>
   </header>
 
-  <main>
-    <!-- FORMULÁRIO DE CONTATO -->
-    <form id="contactForm" data-animate novalidate>
+<main class="contact-wrapper">
+
+  <form id="contactForm" class="contact-card" data-animate>
+
+    <div class="field">
       <label for="nome">Nome</label>
-      <input
-        id="nome"
-        type="text"
-        name="nome"
-        placeholder="Seu nome"
-        required
-      >
+      <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    </div>
 
+    <div class="field">
       <label for="email">E-mail</label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        placeholder="seu@email.com"
-        required
-      >
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+    </div>
 
+    <div class="field">
       <label for="mensagem">Mensagem</label>
-      <textarea
-        id="mensagem"
-        name="mensagem"
-        placeholder="Escreva sua mensagem"
-        rows="5"
-        required
-      ></textarea>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+    </div>
 
-      <button type="submit">Enviar Mensagem</button>
-    </form>
+    <button type="submit" class="button primary contact-button">
+      Enviar mensagem
+    </button>
+
+  </form>
+
+</main>
 
     <!-- REDES SOCIAIS -->
     <div class="social-buttons" data-animate>

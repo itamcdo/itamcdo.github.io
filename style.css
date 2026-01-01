@@ -301,3 +301,106 @@ footer {
     font-size: 2rem;
   }
 }
+
+/* ==========================
+   CONTATO – CARD DO FORMULÁRIO
+========================== */
+
+.contact-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 4rem;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(2, 6, 23, 0.75);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 2rem 2rem 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ==========================
+   CAMPOS
+========================== */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.field label {
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #93c5fd;
+}
+
+.field input,
+.field textarea {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.85rem;
+  color: #e5e7eb;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #64748b;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* ==========================
+   BOTÃO – UX MELHORADA
+========================== */
+
+.contact-button {
+  margin-top: 0.6rem;
+  padding: 0.85rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.4);
+}
+
+.contact-button:active {
+  transform: scale(0.98);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 1.6rem 1.4rem;
+  }
+}

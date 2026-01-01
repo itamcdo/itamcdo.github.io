@@ -28,8 +28,9 @@ body {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 2.2rem;       /* NOME MENOR */
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .hero h2 {
@@ -46,22 +47,40 @@ body {
   color: #cbd5f5;
 }
 
+/* ==========================
+   FOTO DE PERFIL
+========================== */
 .profile-img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1.5rem;
-  border: 3px solid #3b82f6;
-  transition: transform 0.3s ease;
+
+  /* BORDA MAIS ESCURA */
+  border: 3px solid #1e3a8a;
+
+  /* SOMBRA E PROFUNDIDADE */
+  box-shadow: 
+    0 0 0 2px rgba(30, 58, 138, 0.6),
+    0 8px 20px rgba(0, 0, 0, 0.6);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-img:hover { transform: scale(1.05); }
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 3px rgba(30, 58, 138, 0.9),
+    0 12px 28px rgba(0, 0, 0, 0.8);
+}
 
 /* ==========================
    BOTÕES
 ========================== */
-.buttons { margin-top: 2rem; }
+.buttons {
+  margin-top: 2rem;
+}
 
 .button {
   text-decoration: none;
@@ -98,7 +117,7 @@ body {
 }
 
 /* ==========================
-   GRID / CARDS UNIFICADOS
+   GRID / CARDS
 ========================== */
 .cards-grid {
   display: flex;
@@ -110,7 +129,6 @@ body {
   max-width: 900px;
 }
 
-/* Cards comuns */
 .card {
   background: #020617;
   border: 1px solid #1e293b;
@@ -119,14 +137,14 @@ body {
   font-size: 0.95rem;
   min-width: 250px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0; /* invisível inicial */
-  transform: translateY(20px) scale(0.95); /* efeito pop */
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
 }
 
 .card.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  transition: all 0.5s cubic-bezier(0.25, 1.25, 0.5, 1); /* leve elástico */
+  transition: all 0.5s cubic-bezier(0.25, 1.25, 0.5, 1);
 }
 
 .card:hover {
@@ -134,7 +152,6 @@ body {
   box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
 }
 
-/* Ícone ou destaque do card */
 .card .icon {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -188,24 +205,21 @@ footer {
   transform: translateY(0);
 }
 
-/* delay para animação sequencial */
-.hero img.animate { transition-delay: 0.2s; }
-.hero h1.animate { transition-delay: 0.4s; }
-.hero h2.animate { transition-delay: 0.6s; }
-.hero .subtitle.animate { transition-delay: 0.7s; }
-.hero .buttons.animate { transition-delay: 0.9s; }
-
 /* ==========================
-   MEDIA QUERIES PARA MOBILE
+   MEDIA QUERIES
 ========================== */
 @media (max-width: 600px) {
   .card {
-    min-width: 90%; /* Cards ocupam quase toda largura da tela */
+    min-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 1.9rem;
   }
 }
 
 /* ==========================
-   BACKGROUND GRADIENT ANIMADO
+   BACKGROUND ANIMADO
 ========================== */
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }

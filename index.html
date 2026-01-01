@@ -4,72 +4,112 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maria Ita Macêdo | Portfólio de Dados</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- ==========================
+     HERO / SOBRE MIM
+========================== -->
 <header class="hero">
   <img src="assets/profile.jpeg" alt="Maria Ita Macêdo" class="profile-img" data-animate>
+
   <h1 data-animate>Maria Ita Macêdo</h1>
+
   <p class="subtitle" data-animate>
-    Analista de Dados e Business Intelligence, à frente do Command Center Hospitalar,
-    atuando na coleta, integração, tratamento e visualização de dados para suporte à tomada de decisão.
+    Analista de Dados e Business Intelligence, à frente do <strong>Command Center Hospitalar</strong>,
+    com atuação em coleta, integração, análise e visualização de dados para
+    suporte à tomada de decisão em ambientes de alta criticidade.
   </p>
-  <div class="buttons" data-animate>
-    <a href="projects.html" class="button primary">Projetos</a>
-    <a href="certificates.html" class="button secondary">Certificados</a>
-    <a href="skills.html" class="button secondary">Skills</a>
-    <a href="contacts.html" class="button secondary">Contato</a>
-  </div>
+
+  <!-- ÚNICA CTA PRINCIPAL -->
+  <a href="projects.html" class="button primary" data-animate>
+    Ver Projetos
+  </a>
 </header>
 
 <!-- ==========================
-     DESTAQUES / CONQUISTAS
+     ATUAÇÃO PROFISSIONAL
 ========================== -->
 <section class="cards-grid">
   <div class="card" data-animate>
-    <div class="icon">📊</div>
-    <h3>Projetos Concluídos</h3>
-    <p>10+ projetos de BI e análise de dados entregues com impacto real.</p>
+    <h3>📊 Análise & Visualização</h3>
+    <p>
+      Construção de dashboards e indicadores estratégicos com foco em clareza,
+      performance operacional e apoio à decisão.
+    </p>
   </div>
+
   <div class="card" data-animate>
-    <div class="icon">🎓</div>
-    <h3>Certificados</h3>
-    <p>Mais de 5 certificados em Machine Learning, Power BI e SQL.</p>
+    <h3>⚙️ Automação de Dados</h3>
+    <p>
+      Automação de relatórios e processos utilizando Python e scripts,
+      reduzindo tempo operacional e erros manuais.
+    </p>
   </div>
+
   <div class="card" data-animate>
-    <div class="icon">⚡</div>
-    <h3>Skills Técnicas</h3>
-    <p>Python, SQL, Power BI, Node.js e React aplicados em soluções práticas.</p>
+    <h3>🏥 Command Center Hospitalar</h3>
+    <p>
+      Monitoramento de indicadores assistenciais e operacionais em tempo real,
+      apoiando decisões em ambientes críticos.
+    </p>
   </div>
 </section>
 
 <!-- ==========================
-     ÚLTIMOS PROJETOS
+     PROJETOS EM DESTAQUE
 ========================== -->
 <section class="cards-grid">
   <div class="card" data-animate>
-    <h3>Command Center Hospitalar</h3>
-    <p>Automação e visualização de dados em tempo real para suporte à decisão.</p>
-    <a href="projects.html" class="button secondary">Ver Projeto</a>
+    <h3>Dashboard Hospitalar</h3>
+    <p>
+      Análise de indicadores operacionais e assistenciais utilizando Power BI,
+      com foco em gestão hospitalar.
+    </p>
   </div>
+
   <div class="card" data-animate>
-    <h3>Dashboard Financeiro</h3>
-    <p>Relatórios interativos e previsões financeiras usando Power BI.</p>
-    <a href="projects.html" class="button secondary">Ver Projeto</a>
+    <h3>Automação de Relatórios</h3>
+    <p>
+      Scripts em Python e Google Apps Script para otimização de rotinas
+      e padronização de entregas.
+    </p>
   </div>
+
+  <p class="section-link" data-animate>
+    <a href="projects.html">Ver todos os projetos →</a>
+  </p>
 </section>
 
 <!-- ==========================
-     SKILLS / BADGES
+     SKILLS (CONTEXTO, NÃO MENU)
 ========================== -->
-<section class="cards-grid">
+<section class="cards-grid skills">
   <div class="card" data-animate>🐍 Python</div>
   <div class="card" data-animate>🛢 SQL</div>
   <div class="card" data-animate>📊 Power BI</div>
-  <div class="card" data-animate>⚛️ React</div>
   <div class="card" data-animate>⚡ Node.js</div>
+  <div class="card" data-animate>⚛️ React</div>
+</section>
+
+<!-- ==========================
+     CONTATO
+========================== -->
+<section class="contact">
+  <p data-animate>
+    📫 Entre em contato pelo formulário do portfólio ou pelo e-mail:
+  </p>
+  <p data-animate>
+    <strong>itammacedo20@gmail.com</strong>
+  </p>
+
+  <p class="section-link" data-animate>
+    <a href="contacts.html">Ir para contato →</a>
+  </p>
 </section>
 
 <footer>
@@ -87,7 +127,7 @@ function animateOnScroll() {
     if (positionFromTop < windowHeight - 100) {
       setTimeout(() => {
         el.classList.add('show');
-      }, index * 150); // delay sequencial
+      }, index * 120);
     }
   });
 }

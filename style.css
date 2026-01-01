@@ -246,3 +246,16 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
+/* ==========================
+   CERTIFICADOS – AJUSTE DE LARGURA
+========================== */
+
+.certificates-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
+  justify-content: center;
+}
+
+.certificates-grid .card {
+  max-width: 260px;
+}

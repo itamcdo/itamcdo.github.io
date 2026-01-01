@@ -1,59 +1,59 @@
 // ==========================
-// Animação ao carregar a página (hero e cards)
+// HERO – anima ao carregar
 // ==========================
-function animateOnLoad() {
-  const elements = document.querySelectorAll('[data-animate]');
-  elements.forEach((el, index) => {
+window.addEventListener("load", () => {
+  document.querySelectorAll(".hero [data-animate]").forEach((el, index) => {
     el.style.transitionDelay = `${index * 0.15}s`;
-    el.classList.add('show');
+    el.classList.add("show");
   });
+});
+
+// ==========================
+// OBSERVER PARA CARDS E SEÇÕES
+// ==========================
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+// Observa todos os elementos animáveis fora do hero
+document.querySelectorAll("[data-animate]:not(.hero *)").forEach(el => {
+  observer.observe(el);
+});
+
+// ==========================
+// SKILLS – anima somente quando visível
+// ==========================
+let skillsAnimated = false;
+
+const skillsSection = document.querySelector(".skill-card");
+
+if (skillsSection) {
+  const skillsObserver = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting && !skillsAnimated) {
+        skillsAnimated = true;
+
+        document.querySelectorAll(".skill-bar").forEach((bar, index) => {
+          const width = bar.getAttribute("data-width");
+          setTimeout(() => {
+            bar.style.width = width;
+          }, index * 150);
+        });
+      }
+    },
+    { threshold: 0.3 }
+  );
+
+  skillsObserver.observe(skillsSection);
 }
-
-// ==========================
-// Animação ao scroll
-// ==========================
-function animateOnScroll() {
-  const elements = document.querySelectorAll('[data-animate]:not(.show)');
-  const windowHeight = window.innerHeight;
-
-  elements.forEach((el, index) => {
-    const positionFromTop = el.getBoundingClientRect().top;
-    if (positionFromTop < windowHeight - 100) {
-      // delay sequencial ao aparecer no scroll
-      setTimeout(() => {
-        el.classList.add('show');
-      }, index * 100);
-    }
-  });
-}
-
-// ==========================
-// Animação das barras de skills
-// ==========================
-function animateSkills() {
-  const skills = document.querySelectorAll('.skill-bar');
-  skills.forEach((bar, index) => {
-    const width = bar.getAttribute('data-width');
-    setTimeout(() => {
-      bar.style.width = width;
-    }, index * 150); // animação sequencial das barras
-  });
-}
-
-// ==========================
-// Inicialização geral
-// ==========================
-function initAnimations() {
-  animateOnLoad();
-  animateSkills();
-  animateOnScroll();
-}
-
-// ==========================
-// Eventos globais
-// ==========================
-window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', initAnimations);
 
 // ==========================
 // FORMULÁRIO DE CONTATO
@@ -78,14 +78,11 @@ document.addEventListener("DOMContentLoaded", () => {
     button.textContent = "Enviando...";
 
     try {
-      const response = await fetch(
-        "https://SEU_BACKEND_AQUI/api/contact",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload)
-        }
-      );
+      const response = await fetch("https://SEU_BACKEND_AQUI/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
 
       if (!response.ok) throw new Error("Erro ao enviar");
 

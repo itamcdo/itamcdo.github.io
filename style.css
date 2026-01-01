@@ -483,3 +483,43 @@ footer {
 .certificates-grid .card .button {
   margin-top: auto;
 }
+
+/* ==========================
+   BOTÃO PDF – ÍCONE + ANIMAÇÃO
+========================== */
+
+.pdf-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  margin-top: auto;
+
+  border: 1px solid #475569;
+  background: transparent;
+  color: #e5e7eb;
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.pdf-button i {
+  font-size: 0.85rem;
+  color: #ef4444; /* vermelho PDF */
+}
+
+/* HOVER SUTIL */
+.pdf-button:hover {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: #ef4444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(239, 68, 68, 0.25);
+}
+
+/* CLICK */
+.pdf-button:active {
+  transform: scale(0.97);
+}

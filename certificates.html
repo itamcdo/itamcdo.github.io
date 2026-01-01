@@ -1,48 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Certificados | Maria Ita Macêdo</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificados | Maria Ita Macêdo</title>
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS ESPECÍFICO CERTIFICADOS -->
+  <style>
+    main {
+      width: 100%;
+    }
+
+    /* GRID CENTRALIZADO */
+    .certificates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 260px);
+      gap: 1.5rem;
+      justify-content: center;
+
+      width: 100%;
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
+    /* CARD FIXO (ESSENCIAL PRA CENTRALIZAR) */
+    .certificates-grid .card {
+      width: 260px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 1.4rem;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .certificates-grid .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .certificates-grid .icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .certificates-grid h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      color: #e5e7eb;
+    }
+
+    .certificates-grid p {
+      font-size: 0.82rem;
+      color: #cbd5f5;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .certificates-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .certificates-grid .card {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="hero">
-  <h1 data-animate>Certificados</h1>
-  <p data-animate>Aqui estão os principais certificados que obtive em cursos, treinamentos e workshops.</p>
-</header>
+  <!-- HEADER -->
+  <header class="hero">
+    <h1 data-animate>Certificados</h1>
+    <p class="subtitle" data-animate>
+      Aqui estão os principais certificados que obtive em cursos, treinamentos e workshops.
+    </p>
+  </header>
 
-<main>
-  <section class="certificates-grid" data-animate>
-    <div class="card" data-animate>
-      <div class="icon">📄</div>
-      <h3>Nexa - Fundamentos de IA Generativa com Bedrock (9h)</h3>
-      <p>Curso introdutório e prático sobre Inteligência Artificial Generativa, com aplicação dos principais serviços da AWS para desenvolvimento de soluções reais e fortalecimento de portfólio profissional.</p>
-      <a href="certificates/nexa.pdf" class="button secondary" target="_blank">Abrir PDF</a>
-    </div>
+  <!-- CONTEÚDO -->
+  <main>
+    <section class="certificates-grid">
 
-    <div class="card" data-animate>
-      <div class="icon">📄</div>
-      <h3>Nexa - Machine Learning e GenAI na Prática (10h)</h3>
-      <p>Projeto prático de ML no-code com Amazon SageMaker Canvas para previsão de estoque, integrando dados históricos e análise preditiva.</p>
-      <a href="certificates/nexa-machine.pdf" class="button secondary" target="_blank">Abrir PDF</a>
-    </div>
+      <div class="card" data-animate>
+        <div class="icon">📄</div>
+        <h3>Nexa – Fundamentos de IA Generativa com Bedrock (9h)</h3>
+        <p>
+          Curso introdutório e prático sobre Inteligência Artificial Generativa,
+          aplicando serviços da AWS para soluções reais e portfólio profissional.
+        </p>
+        <a href="certificates/nexa.pdf" class="button secondary" target="_blank">
+          Abrir PDF
+        </a>
+      </div>
 
-    <div class="card" data-animate>
-      <div class="icon">📄</div>
-      <h3>SQL + SQLServer - Modelagem de Dados (41.5h)</h3>
-      <p>Curso focado em coleta, integração e análise dados usando SQLServer e Power BI.</p>
-      <a href="certificates/power-bi-sql.pdf" class="button secondary" target="_blank">Abrir PDF</a>
-    </div>
-  </section>
-</main>
+      <div class="card" data-animate>
+        <div class="icon">📄</div>
+        <h3>Nexa – Machine Learning e GenAI na Prática (10h)</h3>
+        <p>
+          Projeto prático de ML no-code com Amazon SageMaker Canvas para previsão
+          de estoque e análise preditiva.
+        </p>
+        <a href="certificates/nexa-machine.pdf" class="button secondary" target="_blank">
+          Abrir PDF
+        </a>
+      </div>
 
-<footer>
-  <p>© 2026 — Maria Ita Macêdo</p>
-</footer>
+      <div class="card" data-animate>
+        <div class="icon">📄</div>
+        <h3>SQL + SQL Server – Modelagem de Dados (41.5h)</h3>
+        <p>
+          Curso focado em coleta, integração e análise de dados usando SQL Server
+          e Power BI.
+        </p>
+        <a href="certificates/power-bi-sql.pdf" class="button secondary" target="_blank">
+          Abrir PDF
+        </a>
+      </div>
 
-<script src="script.js"></script>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 — Maria Ita Macêdo</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
 </body>
 </html>

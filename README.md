@@ -49,5 +49,3 @@ Entre em contato comigo via [formulário do portfolio](contacts.html) ou envie u
 - [Contato](contacts.html)
 
 ---
-
-> Este portfolio foi desenvolvido em **HTML, CSS e JS**, totalmente responsivo e moderno, pronto para deploy no **GitHub Pages**.

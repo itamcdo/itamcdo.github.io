@@ -470,3 +470,16 @@ footer {
 
   width: fit-content;
 }
+
+/* ==========================
+   CERTIFICADOS – BOTÃO NO FUNDO
+========================== */
+
+.certificates-grid .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.certificates-grid .card .button {
+  margin-top: auto;
+}

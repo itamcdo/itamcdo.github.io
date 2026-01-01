@@ -217,3 +217,39 @@ footer {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ==========================
+   SKILLS (BARRAS DE PROGRESSO)
+========================== */
+.skill-card {
+  padding: 0.9rem 0.8rem;
+}
+
+.skill-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+  color: #e5e7eb;
+}
+
+.skill-bar-bg {
+  background: #1e293b;
+  border-radius: 6px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.skill-bar {
+  height: 8px;
+  width: 0; /* começa vazia */
+  background: #3b82f6;
+  border-radius: 6px;
+  transition: width 1.2s ease;
+}

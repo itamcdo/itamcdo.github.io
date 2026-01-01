@@ -248,27 +248,21 @@ footer {
 }
 
 /* ==========================
-   CERTIFICADOS – AJUSTE DE LARGURA
+   CERTIFICADOS – CENTRALIZADO
 ========================== */
-
 .certificates-grid {
-  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+
+  max-width: 900px;   /* controla largura total */
+  width: 100%;
+  margin: 2rem auto;  /* CENTRALIZA o grid */
+  padding: 0 1rem;
+
+  justify-items: center; /* CENTRALIZA os cards */
 }
 
-.certificates-grid .card {
-  max-width: 260px;
-}
-
-@media (max-width: 600px) {
-  .certificates-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .certificates-grid .card {
-    max-width: 100%;
-  }
-}
 
 /* ==========================
    CONTATO – HEADER

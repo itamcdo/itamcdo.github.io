@@ -247,21 +247,21 @@ footer {
   }
 }
 
-/* ==========================
-   CERTIFICADOS – CENTRALIZADO
-========================== */
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
 
-  max-width: 900px;   /* controla largura total */
+  /* cards com largura fixa */
+  grid-template-columns: repeat(auto-fit, 260px);
+  gap: 1.5rem;
+
+  justify-content: center; 
+  
   width: 100%;
-  margin: 2rem auto;  /* CENTRALIZA o grid */
+  max-width: 1100px;
+  margin: 2.5rem auto;
   padding: 0 1rem;
-
-  justify-items: center; /* CENTRALIZA os cards */
 }
+
 
 
 /* ==========================

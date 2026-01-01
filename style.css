@@ -239,3 +239,10 @@ footer {
   transform: scale(1.05);
 }
 
+@media (max-width: 600px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+}
